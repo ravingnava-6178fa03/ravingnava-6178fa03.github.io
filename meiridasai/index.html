@@ -1,0 +1,2672 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日大赛 6月9日大赛 白虎 - 视觉作品与赛事聚合</title>
+  <meta name="description" content="每日大赛 6月9日大赛 白虎主题站，聚合白虎风格插画、3D渲染与角色设计赛事条目，包含6月9日赛程回顾、精选作品、榜单与选手评论。">
+  <meta name="keywords" content="每日大赛 6月9日大赛 白虎">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a1a2e'/%3E%3Cpath d='M16 6L20 14H26L21 19L23 27L16 22L9 27L11 19L6 14H12Z' fill='%23e6b800'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --color-primary: #1a1a2e;
+      --color-primary-light: #2d2d4a;
+      --color-primary-dark: #0f0f1a;
+      --color-accent: #e6b800;
+      --color-accent-light: #fff3c4;
+      --color-bg: #f7f5f0;
+      --color-surface: #ffffff;
+      --color-text: #1e1e1e;
+      --color-text-secondary: #5a5a5a;
+      --color-text-tertiary: #8a8a8a;
+      --color-border: #e0dcd4;
+      --color-divider: #ece8e0;
+      --radius-card: 12px;
+      --radius-button: 8px;
+      --radius-tag: 4px;
+      --radius-banner: 16px;
+      --shadow-default: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      --font-display: "Georgia", "Times New Roman", "Songti SC", "SimSun", serif;
+      --announcement-height: 40px;
+      --header-height: 60px;
+      --sticky-offset: calc(var(--announcement-height) + var(--header-height));
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--sticky-offset) + 16px);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--color-accent);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== 吸顶公告条 ===== */
+    .announcement-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--color-primary-dark);
+      color: #e8e4d8;
+      height: var(--announcement-height);
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      overflow: hidden;
+    }
+
+    .announcement-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    .announcement-bar .container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .announcement-bar .brand-mark {
+      font-weight: 700;
+      color: var(--color-accent);
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .announcement-bar .announce-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .announcement-bar .announce-date {
+      color: var(--color-accent-light);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .announcement-bar .announce-sep {
+      width: 1px;
+      height: 14px;
+      background: rgba(255,255,255,0.2);
+      flex-shrink: 0;
+    }
+
+    /* ===== 吸顶页头 ===== */
+    .site-header {
+      position: sticky;
+      top: var(--announcement-height);
+      z-index: 99;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-divider);
+      height: var(--header-height);
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      gap: 20px;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .header-brand svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .header-brand .brand-text {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--color-primary);
+      letter-spacing: 0.5px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .header-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header-nav a {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius-button);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header-nav a:hover,
+    .header-nav a.active {
+      background: var(--color-accent-light);
+      color: var(--color-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 0 12px;
+      height: 34px;
+      transition: border-color 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--color-accent);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      color: var(--color-text);
+      width: 140px;
+      font-family: var(--font-sans);
+    }
+
+    .search-box input::placeholder {
+      color: var(--color-text-tertiary);
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--color-text-tertiary);
+      padding: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box button:hover {
+      color: var(--color-accent);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-button);
+      padding: 6px 8px;
+      cursor: pointer;
+      color: var(--color-text);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--color-primary) 0%, #2a1a2e 50%, #1a1a2e 100%);
+      color: #f0ece0;
+      overflow: hidden;
+      padding: 72px 0 64px;
+      margin-bottom: 0;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 80% 20%, rgba(230,184,0,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 10% 80%, rgba(230,184,0,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+
+    .hero-content .hero-desc {
+      font-size: 15px;
+      color: #c8c0b0;
+      line-height: 1.8;
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: var(--radius-button);
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #f0c800;
+      color: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: #c8c0b0;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: var(--radius-button);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: border-color 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+    }
+
+    /* ===== 主布局：三栏门户 ===== */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr 260px;
+      gap: 28px;
+      padding: 32px 0 48px;
+      align-items: start;
+    }
+
+    /* ===== 左侧频道索引 ===== */
+    .channel-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+    }
+
+    .channel-sidebar h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-text-tertiary);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .channel-list {
+      list-style: none;
+    }
+
+    .channel-list li {
+      margin-bottom: 2px;
+    }
+
+    .channel-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      border-radius: var(--radius-button);
+      transition: background 0.15s, color 0.15s;
+      border-left: 3px solid transparent;
+    }
+
+    .channel-list a:hover {
+      background: var(--color-surface);
+      color: var(--color-primary);
+    }
+
+    .channel-list a.active {
+      background: var(--color-surface);
+      color: var(--color-primary);
+      font-weight: 600;
+      border-left-color: var(--color-accent);
+    }
+
+    .channel-list .channel-count {
+      margin-left: auto;
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      background: var(--color-bg);
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+
+    /* ===== 中间主内容 ===== */
+    .main-content {
+      min-width: 0;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      gap: 12px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.5px;
+    }
+
+    .section-header .section-more {
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+      white-space: nowrap;
+    }
+
+    .section-header .section-more:hover {
+      color: var(--color-accent);
+    }
+
+    /* 概览段落 */
+    .overview-text {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-default);
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--color-text-secondary);
+    }
+
+    .overview-text p {
+      margin-bottom: 12px;
+    }
+
+    .overview-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .overview-text strong {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--color-primary-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .card:hover .card-img img {
+      transform: scale(1.03);
+    }
+
+    .card-img .card-type-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(26,26,46,0.82);
+      color: var(--color-accent);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      letter-spacing: 0.5px;
+    }
+
+    .card-body {
+      padding: 12px 14px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .card-body .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .card-tags span {
+      font-size: 10px;
+      color: var(--color-text-tertiary);
+      background: var(--color-bg);
+      padding: 1px 7px;
+      border-radius: var(--radius-tag);
+    }
+
+    .card-body .card-desc {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      border-top: 1px solid var(--color-divider);
+      padding-top: 8px;
+    }
+
+    .card-meta .heat {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    /* 更新列表 */
+    .update-list {
+      list-style: none;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .update-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--color-divider);
+      transition: background 0.15s;
+    }
+
+    .update-list li:last-child {
+      border-bottom: none;
+    }
+
+    .update-list li:hover {
+      background: #faf8f4;
+    }
+
+    .update-list .update-date {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      white-space: nowrap;
+      min-width: 56px;
+      padding-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .update-list .update-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .update-list .update-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+
+    .update-list .update-summary {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .category-item {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 16px 14px;
+      text-align: center;
+      box-shadow: var(--shadow-default);
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .category-item:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+      border-color: var(--color-accent);
+    }
+
+    .category-item .cat-icon {
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .category-item .cat-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .category-item .cat-count {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+    }
+
+    /* 深度解析 */
+    .deep-analysis {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .deep-analysis h3 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: 24px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--color-accent);
+      display: inline-block;
+    }
+
+    .deep-analysis h3:first-child {
+      margin-top: 0;
+    }
+
+    .deep-analysis p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.9;
+      margin-bottom: 12px;
+    }
+
+    .deep-analysis ul {
+      margin: 8px 0 14px 18px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+
+    .deep-analysis ul li {
+      margin-bottom: 4px;
+    }
+
+    .deep-analysis .compare-box {
+      background: var(--color-bg);
+      border-radius: var(--radius-button);
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .deep-analysis .compare-box strong {
+      color: var(--color-primary);
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      counter-reset: step;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .guide-steps li {
+      counter-increment: step;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 16px 20px 16px 56px;
+      box-shadow: var(--shadow-default);
+      position: relative;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+
+    .guide-steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 26px;
+      height: 26px;
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .guide-steps li strong {
+      color: var(--color-text);
+      display: block;
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background 0.15s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--color-text-tertiary);
+      font-weight: 400;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+      color: var(--color-accent);
+    }
+
+    .faq-item summary:hover {
+      background: #faf8f4;
+    }
+
+    .faq-item .faq-answer {
+      padding: 0 20px 16px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .comment-item {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 12px;
+    }
+
+    .comment-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .comment-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .comment-body .comment-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+
+    .comment-body .comment-text {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    .comment-body .comment-time {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      margin-top: 4px;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .news-item {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+
+    .news-item:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-item .news-date-box {
+      background: var(--color-primary);
+      color: var(--color-accent);
+      border-radius: var(--radius-button);
+      padding: 6px 10px;
+      text-align: center;
+      flex-shrink: 0;
+      min-width: 56px;
+    }
+
+    .news-item .news-date-box .nd-day {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .news-item .news-date-box .nd-month {
+      font-size: 10px;
+      opacity: 0.8;
+    }
+
+    .news-item .news-content h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .news-item .news-content p {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-cloud a {
+      display: inline-block;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .tag-cloud a:hover {
+      border-color: var(--color-accent);
+      color: var(--color-primary);
+      background: var(--color-accent-light);
+    }
+
+    /* 榜单 */
+    .rank-list {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .rank-list .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--color-divider);
+      transition: background 0.15s;
+    }
+
+    .rank-list .rank-item:last-child {
+      border-bottom: none;
+    }
+
+    .rank-list .rank-item:hover {
+      background: #faf8f4;
+    }
+
+    .rank-list .rank-num {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-text-tertiary);
+      min-width: 28px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .rank-list .rank-num.top1 {
+      color: var(--color-accent);
+    }
+
+    .rank-list .rank-num.top2 {
+      color: #a0a0a0;
+    }
+
+    .rank-list .rank-num.top3 {
+      color: #c08050;
+    }
+
+    .rank-list .rank-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .rank-list .rank-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 1px;
+    }
+
+    .rank-list .rank-sub {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+    }
+
+    .rank-list .rank-score {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    /* 投稿互动 */
+    .interact-panel {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #2a1a2e 100%);
+      border-radius: var(--radius-banner);
+      padding: 28px 32px;
+      color: #e8e4d8;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .interact-panel h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .interact-panel p {
+      font-size: 13px;
+      color: #b8b0a0;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    /* ===== 右侧辅助栏 ===== */
+    .sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px 16px;
+    }
+
+    .sidebar-card h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-divider);
+      letter-spacing: 0.5px;
+    }
+
+    .sidebar-card .side-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-card .side-list li {
+      display: flex;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+      align-items: baseline;
+    }
+
+    .sidebar-card .side-list .side-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .sidebar-card .side-list .side-link {
+      color: var(--color-text-secondary);
+    }
+
+    .sidebar-card .side-list .side-link:hover {
+      color: var(--color-accent);
+    }
+
+    .sidebar-card .side-list .side-meta {
+      font-size: 10px;
+      color: var(--color-text-tertiary);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-accent);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+      z-index: 50;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      background: var(--color-primary-light);
+    }
+
+    /* ===== 页尾 ===== */
+    .site-footer {
+      background: var(--color-primary-dark);
+      color: #a8a090;
+      padding: 48px 0 28px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand .footer-logo svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer-brand .footer-logo span {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .footer-brand p {
+      font-size: 12px;
+      line-height: 1.7;
+      color: #8a8478;
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: #d8d0c0;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-col ul li a {
+      font-size: 12px;
+      color: #8a8478;
+      transition: color 0.15s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11px;
+      color: #6a6458;
+    }
+
+    .footer-bottom a {
+      color: #8a8478;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--color-accent);
+    }
+
+    /* 筛选高亮 */
+    .filter-highlight {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+      border-radius: var(--radius-card);
+    }
+
+    .no-result-msg {
+      display: none;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--color-text-tertiary);
+      box-shadow: var(--shadow-default);
+    }
+
+    .no-result-msg.show {
+      display: block;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr 260px;
+      }
+
+      .channel-sidebar {
+        display: none;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .interact-panel {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        order: 10;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding: 48px 0 40px;
+      }
+
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .search-box input {
+        width: 90px;
+      }
+
+      .deep-analysis {
+        padding: 20px 18px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .update-list li {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .news-item {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .news-item .news-date-box {
+        display: flex;
+        gap: 4px;
+        align-items: baseline;
+        padding: 4px 10px;
+      }
+
+      .news-item .news-date-box .nd-day {
+        font-size: 15px;
+      }
+
+      .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .search-box {
+        display: none;
+      }
+    }
+
+    /* 移动端抽屉菜单 */
+    .mobile-menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+    }
+
+    .mobile-menu-overlay.open {
+      display: block;
+    }
+
+    .mobile-menu-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 280px;
+      background: var(--color-surface);
+      z-index: 201;
+      padding: 24px 20px;
+      transform: translateX(100%);
+      transition: transform 0.25s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-panel.open {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-panel .mobile-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--color-text);
+      margin-bottom: 16px;
+      padding: 4px;
+      line-height: 1;
+    }
+
+    .mobile-menu-panel nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-menu-panel nav a {
+      padding: 10px 12px;
+      border-radius: var(--radius-button);
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+
+    .mobile-menu-panel nav a:hover,
+    .mobile-menu-panel nav a.active {
+      background: var(--color-accent-light);
+      color: var(--color-primary);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* 焦点可见 */
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    /* 隐藏类 */
+    .hidden-by-filter {
+      display: none !important;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announcement-bar">
+    <div class="container">
+      <span class="brand-mark">每日大赛</span>
+      <span class="announce-item">
+        <span class="announce-date">11月8日</span>
+        <span class="announce-sep"></span>
+        <span>白虎主题赛「霜刃」入围作品公示</span>
+      </span>
+      <span class="announce-item">
+        <span class="announce-date">11月6日</span>
+        <span class="announce-sep"></span>
+        <span>6月9日赛事回顾长片上线，12组选手访谈收录</span>
+      </span>
+      <span class="announce-item">
+        <span class="announce-date">11月3日</span>
+        <span class="announce-sep"></span>
+        <span>第14期白虎角色设计赛开放投稿，截止11月20日</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/#hero" class="header-brand">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1a1a2e"/>
+          <path d="M16 6L20 14H26L21 19L23 27L16 22L9 27L11 19L6 14H12Z" fill="#e6b800"/>
+        </svg>
+        <span class="brand-text">每日大赛</span>
+      </a>
+      <nav class="header-nav" aria-label="主导航">
+        <a href="/#overview" class="active">概览</a>
+        <a href="/#featured">精选作品</a>
+        <a href="/#updates">赛事动态</a>
+        <a href="/#categories">分类</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">观赛指南</a>
+        <a href="/#faq">问答</a>
+        <a href="/#comments">评论</a>
+        <a href="/#news">资讯</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜索作品或选手…" aria-label="搜索作品或选手">
+          <button id="searchBtn" aria-label="搜索">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 移动端菜单遮罩与面板 -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu-panel" id="mobilePanel">
+    <button class="mobile-close" id="mobileClose" aria-label="关闭菜单">×</button>
+    <nav aria-label="移动端导航">
+      <a href="/#overview">概览</a>
+      <a href="/#featured">精选作品</a>
+      <a href="/#updates">赛事动态</a>
+      <a href="/#categories">分类</a>
+      <a href="/#analysis">深度解析</a>
+      <a href="/#guide">观赛指南</a>
+      <a href="/#faq">问答</a>
+      <a href="/#comments">评论</a>
+      <a href="/#news">资讯</a>
+      <a href="/#interact">投稿互动</a>
+      <a href="/#rank">榜单</a>
+    </nav>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>每日大赛 6月9日大赛 白虎</h1>
+        <p class="hero-desc">
+          聚合白虎主题插画、角色设定与3D渲染赛事条目。6月9日大赛完整赛果、选手访谈与入围作品已归档；霜刃主题新赛投稿开放中，收录12组评委点评与38件参赛作品。
+        </p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn-primary">
+            查看精选作品
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/#updates" class="btn-outline">6月9日赛程回顾</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#e6b800" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#e6b800" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="190" cy="170" r="160" fill="url(#glow)"/>
+          <path d="M190 50 L230 130 L310 130 L250 185 L275 270 L190 220 L105 270 L130 185 L70 130 L150 130 Z" fill="#e6b800" opacity="0.15"/>
+          <path d="M190 70 L220 135 L285 135 L233 180 L255 250 L190 208 L125 250 L147 180 L95 135 L160 135 Z" stroke="#e6b800" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <circle cx="190" cy="170" r="50" stroke="#e6b800" stroke-width="1" fill="none" opacity="0.3"/>
+          <circle cx="190" cy="170" r="30" stroke="#e6b800" stroke-width="0.8" fill="none" opacity="0.2"/>
+          <text x="190" y="310" text-anchor="middle" fill="#e6b800" font-size="12" font-family="Georgia, serif" opacity="0.6" letter-spacing="3">BAIHU · JUNE 9</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区 -->
+  <div class="container">
+    <div class="main-layout">
+
+      <!-- 左侧频道索引 -->
+      <aside class="channel-sidebar" aria-label="频道索引">
+        <h2>频道索引</h2>
+        <ul class="channel-list">
+          <li><a href="/#overview" class="active">赛事概览 <span class="channel-count">12</span></a></li>
+          <li><a href="/#featured">精选作品 <span class="channel-count">10</span></a></li>
+          <li><a href="/#updates">赛程动态 <span class="channel-count">9</span></a></li>
+          <li><a href="/#categories">分类入口 <span class="channel-count">8</span></a></li>
+          <li><a href="/#analysis">深度解析 <span class="channel-count">5</span></a></li>
+          <li><a href="/#guide">观赛指南 <span class="channel-count">4</span></a></li>
+          <li><a href="/#faq">常见问答 <span class="channel-count">6</span></a></li>
+          <li><a href="/#comments">选手评论 <span class="channel-count">16</span></a></li>
+          <li><a href="/#news">相关资讯 <span class="channel-count">6</span></a></li>
+          <li><a href="/#rank">人气榜单 <span class="channel-count">8</span></a></li>
+          <li><a href="/#interact">投稿互动</a></li>
+        </ul>
+      </aside>
+
+      <!-- 中间主内容 -->
+      <main class="main-content">
+
+        <!-- 1. 主题领域概览 -->
+        <section class="section" id="overview">
+          <div class="section-header">
+            <h2>白虎主题视觉赛事生态</h2>
+          </div>
+          <div class="overview-text">
+            <p>
+              <strong>白虎</strong>在视觉创作领域里，指向的是一类以白色虎纹、冰蓝或霜银色调、利落线条为特征的风格化表达。它跟写实动物摄影的区别在于：创作者会把“虎”的骨骼结构拆解成几何块面，再以高对比的明暗关系重组。6月9日大赛中，38件入围作品里有21件采用数字绘画，9件为3D渲染，剩余8件分布在拼贴、矢量与混合媒介。
+            </p>
+            <p>
+              从近期赛事条目看，白虎主题的评委打分权重集中在<strong>“纹样再设计”</strong>和<strong>“动态张力”</strong>两项。选手“霜刃”的《白夜巡猎》在纹样项拿到9.2分，但动态项只有7.6分，原因是后腿发力角度与猫科解剖逻辑有偏差。另一件作品《冰脊》则在3D组别里把毛发解算精度做到了单帧12万根曲线，代价是渲染时长每帧47分钟，导致展示视频卡顿。
+            </p>
+            <p>
+              赛事之外，白虎风格的角色设计正被独立游戏团队大量采用。11月6日上线的6月9日赛事回顾长片中，三位评委提到一个共同观察：白虎元素的辨识度足够高，但容易滑向符号堆砌——虎纹铺满画面，反而丢掉了主体轮廓的可读性。这条判断在后续的选手访谈里被反复印证，也构成了霜刃主题赛的评审前提。
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section class="section" id="featured">
+          <div class="section-header">
+            <h2>白虎赛入围作品精选</h2>
+            <a href="/#rank" class="section-more">查看完整榜单 →</a>
+          </div>
+          <div class="card-grid" id="cardGrid">
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu01/400/300" alt="《白夜巡猎》数字绘画作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">数字绘画</span>
+              </div>
+              <div class="card-body">
+                <h3>白夜巡猎</h3>
+                <div class="card-tags"><span>纹样再设计</span><span>猫科解剖</span><span>霜银色调</span></div>
+                <p class="card-desc">选手“霜刃”以夜间雪原为场景，虎纹被处理成断裂的冰裂纹。纹样项9.2分，后腿发力角度在评委复核中被指出与猫科运动逻辑存在夹角。</p>
+                <div class="card-meta"><span class="heat">9.2 评分</span><span>11月6日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu02/400/300" alt="《冰脊》3D渲染作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">3D渲染</span>
+              </div>
+              <div class="card-body">
+                <h3>冰脊</h3>
+                <div class="card-tags"><span>毛发解算</span><span>单帧47分钟</span><span>3D组</span></div>
+                <p class="card-desc">毛发解算精度做到单帧12万根曲线，渲染时长每帧47分钟。展示视频因卡顿被评委扣掉完成度分，但技术执行项拿到全场最高8.9分。</p>
+                <div class="card-meta"><span class="heat">8.9 评分</span><span>11月6日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu03/400/300" alt="《霜刃：零》角色设定作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">角色设定</span>
+              </div>
+              <div class="card-body">
+                <h3>霜刃：零</h3>
+                <div class="card-tags"><span>三视图</span><span>装备逻辑</span><span>设定集</span></div>
+                <p class="card-desc">选手“北岭”提交了完整三视图与六件装备拆解，护甲接缝全部对齐虎纹肌理走向。评委在11月5日点评中提到“装备与身体结构形成互文”。</p>
+                <div class="card-meta"><span class="heat">8.7 评分</span><span>11月5日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu04/400/300" alt="《断纹》矢量插画作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">矢量插画</span>
+              </div>
+              <div class="card-body">
+                <h3>断纹</h3>
+                <div class="card-tags"><span>负空间</span><span>极简</span><span>矢量组</span></div>
+                <p class="card-desc">全图只用了三种颜色，虎纹以负空间形式出现在白色背景上。评委打分表里“辨识度”一栏给了9.0，但“细节丰富度”仅6.8，两极分化明显。</p>
+                <div class="card-meta"><span class="heat">7.9 评分</span><span>11月4日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu05/400/300" alt="《雪岭双雄》场景概念作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">场景概念</span>
+              </div>
+              <div class="card-body">
+                <h3>雪岭双雄</h3>
+                <div class="card-tags"><span>双虎构图</span><span>大气透视</span><span>环境叙事</span></div>
+                <p class="card-desc">两只白虎一前一后，利用雪雾分层拉开景深。选手“白砚”在11月3日直播中拆解了图层顺序，远景虎的对比度被刻意压到13%，近景保持在62%。</p>
+                <div class="card-meta"><span class="heat">8.5 评分</span><span>11月3日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu06/400/300" alt="《虎纹频率》动态设计作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">动态设计</span>
+              </div>
+              <div class="card-body">
+                <h3>虎纹频率</h3>
+                <div class="card-tags"><span>逐帧动画</span><span>节奏映射</span><span>声音可视化</span></div>
+                <p class="card-desc">把虎纹的疏密变化映射到音频波形上，12秒短片共绘制了288帧。选手在说明文档里标注了每一帧对应的音频频段，评委称“方法可复现”。</p>
+                <div class="card-meta"><span class="heat">8.4 评分</span><span>11月2日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu07/400/300" alt="《白虎机甲》机械设定作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">机械设定</span>
+              </div>
+              <div class="card-body">
+                <h3>白虎机甲</h3>
+                <div class="card-tags"><span>骨骼外露</span><span>液压关节</span><span>赛博格</span></div>
+                <p class="card-desc">把虎的骨架转化为外露机械结构，肩胛骨位置装了双液压杆。选手“铁羽”标注了23个关节的转动范围，其中7个参考了真实猫科活动角度。</p>
+                <div class="card-meta"><span class="heat">8.2 评分</span><span>11月1日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu08/400/300" alt="《霜纹笔记》设定集作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">设定集</span>
+              </div>
+              <div class="card-body">
+                <h3>霜纹笔记</h3>
+                <div class="card-tags"><span>手绘稿</span><span>过程记录</span><span>文字注解</span></div>
+                <p class="card-desc">32页手绘设定集，包含7版废弃草稿和对应修改理由。选手“砚秋”在每页边缘写了为什么改掉上一版的纹样走向，评委称其为“可教学的样本”。</p>
+                <div class="card-meta"><span class="heat">8.8 评分</span><span>10月30日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu09/400/300" alt="《寒纹》拼贴作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">拼贴</span>
+              </div>
+              <div class="card-body">
+                <h3>寒纹</h3>
+                <div class="card-tags"><span>纸本拼贴</span><span>手撕边缘</span><span>混合媒介</span></div>
+                <p class="card-desc">用宣纸手撕出虎纹轮廓，再叠印在硫酸纸上。选手“纸间”在11月2日上传了制作过程，撕纸耗时14小时，其中三分之二时间花在控制边缘毛糙度。</p>
+                <div class="card-meta"><span class="heat">7.7 评分</span><span>10月28日更新</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img src="https://picsum.photos/seed/baihu10/400/300" alt="《巡山》水墨风格作品缩略图" width="400" height="300" loading="lazy">
+                <span class="card-type-badge">水墨</span>
+              </div>
+              <div class="card-body">
+                <h3>巡山</h3>
+                <div class="card-tags"><span>没骨画法</span><span>留白</span><span>宣纸扫描</span></div>
+                <p class="card-desc">用没骨法画白虎，虎纹以淡墨积染七层形成。选手“山阴”在11月1日说明里写了每层墨色的浓度配比，评委认为“把传统技法用在了新题材上”。</p>
+                <div class="card-meta"><span class="heat">8.1 评分</span><span>10月27日更新</span></div>
+              </div>
+            </article>
+
+          </div>
+          <div class="no-result-msg" id="noResultMsg">没有找到匹配的作品，试试“霜刃”“冰脊”“机甲”等关键词。</div>
+        </section>
+
+        <!-- 3. 最新更新/动态 -->
+        <section class="section" id="updates">
+          <div class="section-header">
+            <h2>赛程与条目更新</h2>
+          </div>
+          <ul class="update-list">
+            <li>
+              <span class="update-date">11月8日</span>
+              <div class="update-body">
+                <div class="update-title">霜刃主题赛入围名单公示</div>
+                <div class="update-summary">38件作品进入终审，数字绘画21件、3D渲染9件、其他8件。评委评分表同步公开，纹样项与动态项权重各占30%。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">11月6日</span>
+              <div class="update-body">
+                <div class="update-title">6月9日大赛回顾长片上线</div>
+                <div class="update-summary">片长47分钟，收录12组选手访谈与6位评委圆桌。霜刃在访谈中首次回应《白夜巡猎》后腿角度争议。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">11月5日</span>
+              <div class="update-body">
+                <div class="update-title">评委北岭点评《霜刃：零》装备逻辑</div>
+                <div class="update-summary">“护甲接缝对齐虎纹肌理走向”被写入评审细则参考案例，后续赛事将装备与身体结构关系列入角色设定组评分项。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">11月3日</span>
+              <div class="update-body">
+                <div class="update-title">第14期白虎角色设计赛开放投稿</div>
+                <div class="update-summary">主题“霜刃”，要求提交三视图与至少四件装备拆解。投稿截止11月20日23:59，评审团增加一位解剖学顾问。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">11月2日</span>
+              <div class="update-body">
+                <div class="update-title">《虎纹频率》逐帧源文件开放下载</div>
+                <div class="update-summary">288帧PSD与音频映射表打包上传，选手标注了每一帧对应的频段。下载量在两天内超过1200次。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">11月1日</span>
+              <div class="update-body">
+                <div class="update-title">《巡山》七层墨色配比公开</div>
+                <div class="update-summary">淡墨积染每层浓度从8%递增到52%，选手“山阴”附上了每层干燥时间与纸张克重数据。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">10月30日</span>
+              <div class="update-body">
+                <div class="update-title">《霜纹笔记》手绘稿高清扫描版发布</div>
+                <div class="update-summary">32页设定集含7版废弃草稿与修改批注，评委称其为“可教学的样本”，已被两所院校选为课堂参考。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">10月28日</span>
+              <div class="update-body">
+                <div class="update-title">《寒纹》拼贴过程记录上线</div>
+                <div class="update-summary">14小时撕纸过程压缩成18分钟记录片，重点展示边缘毛糙度的控制方法，以及宣纸与硫酸纸的叠印顺序。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">10月26日</span>
+              <div class="update-body">
+                <div class="update-title">6月9日大赛评分细则修订版发布</div>
+                <div class="update-summary">纹样再设计项新增“符号堆砌扣分”条款：主体轮廓可读性低于阈值的作品，该单项最高不超过7分。</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section" id="categories">
+          <div class="section-header">
+            <h2>按创作类型筛选</h2>
+          </div>
+          <div class="category-grid" id="categoryGrid">
+            <button class="category-item" data-filter="数字绘画">
+              <span class="cat-icon">🖌️</span>
+              <span class="cat-name">数字绘画</span>
+              <span class="cat-count">21件</span>
+            </button>
+            <button class="category-item" data-filter="3D渲染">
+              <span class="cat-icon">🧊</span>
+              <span class="cat-name">3D渲染</span>
+              <span class="cat-count">9件</span>
+            </button>
+            <button class="category-item" data-filter="角色设定">
+              <span class="cat-icon">📐</span>
+              <span class="cat-name">角色设定</span>
+              <span class="cat-count">6件</span>
+            </button>
+            <button class="category-item" data-filter="矢量插画">
+              <span class="cat-icon">✒️</span>
+              <span class="cat-name">矢量插画</span>
+              <span class="cat-count">4件</span>
+            </button>
+            <button class="category-item" data-filter="场景概念">
+              <span class="cat-icon">🏔️</span>
+              <span class="cat-name">场景概念</span>
+              <span class="cat-count">5件</span>
+            </button>
+            <button class="category-item" data-filter="动态设计">
+              <span class="cat-icon">🎬</span>
+              <span class="cat-name">动态设计</span>
+              <span class="cat-count">3件</span>
+            </button>
+            <button class="category-item" data-filter="机械设定">
+              <span class="cat-icon">⚙️</span>
+              <span class="cat-name">机械设定</span>
+              <span class="cat-count">2件</span>
+            </button>
+            <button class="category-item" data-filter="拼贴">
+              <span class="cat-icon">📄</span>
+              <span class="cat-name">拼贴与混合媒介</span>
+              <span class="cat-count">3件</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section class="section" id="analysis">
+          <div class="section-header">
+            <h2>白虎风格的三组判断分歧</h2>
+          </div>
+          <div class="deep-analysis">
+            <h3>纹样密度与轮廓可读性的拉锯</h3>
+            <p>
+              6月9日大赛的评分表里，纹样再设计项和主体轮廓可读性项存在明显的负相关。数据摆在这里：纹样项得分前五的作品，平均轮廓可读性得分6.9；纹样项六到十名的作品，轮廓可读性平均7.8。分差不大，但方向一致。
+            </p>
+            <p>
+              评委“北岭”在11月5日的点评中把问题说得更直接：白虎的辨识度来自“白底黑纹”的强对比，选手容易把纹样画满来强化这个印象，结果虎的体块转折被纹样盖住了。《白夜巡猎》就是一个例子。霜刃把冰裂纹理铺满了整只虎，纹样项拿了9.2，但评委复核时指出后腿的发力角度因为纹样切割而看不清楚——观众第一眼看到的是一片冰裂纹，第二眼才找到腿。
+            </p>
+            <div class="compare-box">
+              <strong>可核对的结构：</strong>评审细则修订版（10月26日）新增条款——“纹样覆盖面积超过主体轮廓线条米数1.5倍时，轮廓可读性项扣1分”。这条规则在霜刃主题赛中首次生效，目前有4件投稿因此被扣分。
+            </div>
+
+            <h3>3D组的毛发精度与展示流畅度</h3>
+            <p>
+              《冰脊》的毛发解算精度是单帧12万根曲线，这个数字在3D组里排第一。代价也很具体：每帧渲染47分钟，12秒的展示视频用了288帧，总渲染时长约225小时。选手在提交说明里写了渲染农场排队时间——11月1日到11月3日，两天两夜。
+            </p>
+            <p>
+              评委对这件作品的评价分两截。技术执行项8.9分，全场最高。完成度项只有7.2分，原因是视频播放到第4秒和第7秒各有一处明显卡顿。评委“铁羽”在圆桌里说了一句：“精度是手段，不是目的。”这句话在选手访谈里被霜刃接过去用在了自己的作品上——他的《白夜巡猎》精度远不如《冰脊》，但完整播放没有卡顿。
+            </p>
+            <p>
+              这组对比说明的问题不是“精度不重要”，而是精度必须跟交付形态匹配。静态图可以堆精度，动态交付就要算帧率和文件体积。霜刃主题赛的评审细则里，动态设计组别已经单独列出了“播放流畅度”子项，权重12%。
+            </p>
+
+            <h3>角色设定里的装备逻辑</h3>
+            <p>
+              《霜刃：零》的装备拆解是6月9日赛事里被讨论最多的一份设定稿。北岭给出8.7分，评语只有一句：“护甲接缝对齐虎纹肌理走向。”这句话后面跟着的是一张对照图——六件装备的接缝线在三维空间里全部沿着虎纹的走向延伸，没有一条是横切纹路的。
+            </p>
+            <p>
+              对比另一件角色设定作品《白虎机甲》，铁羽把23个关节的转动范围标了出来，其中7个参考了真实猫科的活动角度。评委的反馈是“数据扎实，但装备和身体的关系是贴上去的，不是长出来的”。两件作品的分差是0.5分（8.7对8.2），差距就在装备与身体结构是否形成互文。
+            </p>
+            <ul>
+              <li><strong>已公开事实：</strong>北岭的评语和对照图在11月5日上传至赛事档案，可下载。</li>
+              <li><strong>当事人回应：</strong>铁羽在11月7日的直播里承认“装备逻辑是弱项”，表示霜刃主题赛会重做肩部结构。</li>
+              <li><strong>媒体转述：</strong>两家设计类公众号在11月6日转载了北岭的对照图，其中一家把“互文”改成了“呼应”，被读者指出丢了原意。</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="section" id="guide">
+          <div class="section-header">
+            <h2>观赛与作品筛选路径</h2>
+          </div>
+          <ol class="guide-steps">
+            <li>
+              <strong>先看评委评分表的权重分布</strong>
+              6月9日大赛的评分表里，纹样再设计占30%、动态张力占30%、完成度占25%、技术执行占15%。如果一件作品在完成度项低于7分，即使纹样项满分，总分也很难进前五。先锁定权重，再看单项得分，比直接看总分有效。
+            </li>
+            <li>
+              <strong>按创作类型分组比较，不跨组打分</strong>
+              3D渲染的毛发精度跟矢量插画的负空间运用没有可比性。赛事官方把38件作品分进四组：数字绘画、3D与动态、角色设定与场景、混合媒介。组内比较才有意义。
+            </li>
+            <li>
+              <strong>翻开选手的过程记录再决定要不要投入时间</strong>
+              《霜纹笔记》的32页设定集里有7版废弃草稿和修改理由，这种过程材料比成品图更能判断作品的思考密度。没有过程记录的作品，可以直接跳到评委评语，看评语有没有点出具体的技术或结构问题。
+            </li>
+            <li>
+              <strong>用“轮廓可读性”做快速过滤</strong>
+              把作品缩到手机屏幕大小，看能不能在三秒内认出虎的体块朝向。认不出的，纹样项得分再高也可以先放一放。这条标准来自10月26日修订的评分细则，已经被评委用在了霜刃主题赛的初筛环节。
+            </li>
+          </ol>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section" id="faq">
+          <div class="section-header">
+            <h2>赛事规则与作品判断问答</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>6月9日大赛的评分权重是怎么分配的？</summary>
+              <div class="faq-answer">纹样再设计占30%，动态张力占30%，完成度占25%，技术执行占15%。其中动态张力项在角色设定组里替换为“结构逻辑”，权重不变。评分表随入围名单一同公开，可逐项核对。</div>
+            </details>
+            <details class="faq-item">
+              <summary>白虎风格里“纹样堆砌”的判定标准是什么？</summary>
+              <div class="faq-answer">10月26日修订版细则给出了量化线——纹样覆盖面积超过主体轮廓线条米数的1.5倍时，轮廓可读性项扣1分。评委在初筛时会用缩略图测试：把作品缩到手机屏幕大小，三秒内认不出体块朝向的，进入扣分流程。霜刃主题赛目前有4件投稿因此被扣分。</div>
+            </details>
+            <details class="faq-item">
+              <summary>《冰脊》的毛发精度最高，为什么总分不是第一？</summary>
+              <div class="faq-answer">技术执行项8.9分确实是3D组最高，但完成度项只有7.2分。原因是展示视频在第4秒和第7秒各有一处卡顿，评委按“播放流畅度”子项扣了分。总分计算里完成度占25%，拖累了最终排名。评委铁羽在圆桌里说过“精度是手段，不是目的”。</div>
+            </details>
+            <details class="faq-item">
+              <summary>角色设定组的“装备逻辑”具体看什么？</summary>
+              <div class="faq-answer">看装备接缝与身体结构的关系。《霜刃：零》的六件装备接缝全部沿着虎纹肌理走向延伸，没有一条横切纹路，北岭给了8.7分。《白虎机甲》标了23个关节转动范围，但评委认为装备是“贴上去的”，得8.2分。差距不在数据量，在装备是否从身体结构里长出来。</div>
+            </details>
+            <details class="faq-item">
+              <summary>霜刃主题赛的投稿截止和评审变化？</summary>
+              <div class="faq-answer">11月3日开放投稿，截止11月20日23:59。要求提交三视图和至少四件装备拆解。评审团增加了一位解剖学顾问，专门复核猫科运动逻辑相关的结构问题。这条变化直接来自6月9日大赛中《白夜巡猎》后腿角度争议的后续处理。</div>
+            </details>
+            <details class="faq-item">
+              <summary>白虎主题的动态作品和静态作品在评审上有什么区别？</summary>
+              <div class="faq-answer">动态作品走“3D与动态”组，评分表里多了播放流畅度子项，权重12%。静态作品不评流畅度，但纹样项和轮廓可读性项的权重不变。霜刃主题赛把两组分开排名，不跨组比较总分。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section" id="comments">
+          <div class="section-header">
+            <h2>选手与观众留言</h2>
+          </div>
+          <div class="comment-list">
+            <div class="comment-item">
+              <div class="comment-avatar">霜</div>
+              <div class="comment-body">
+                <div class="comment-name">霜刃_</div>
+                <div class="comment-text">后腿角度那事我认。11月6日访谈里说过一遍，但视频里没剪进去。冰裂纹铺太满是我贪了，下一版会把腿部轮廓留出来。</div>
+                <div class="comment-time">11月8日 09:14</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">北</div>
+              <div class="comment-body">
+                <div class="comment-name">北岭看稿</div>
+                <div class="comment-text">《霜刃：零》的接缝图我存了，给学生看的时候不用多解释，一眼就明白“长出来”和“贴上去”的区别。</div>
+                <div class="comment-time">11月8日 08:02</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">纸</div>
+              <div class="comment-body">
+                <div class="comment-name">纸间</div>
+                <div class="comment-text">撕了14个小时宣纸，最后评委说边缘毛糙度控制得好。谢谢，手已经废了。</div>
+                <div class="comment-time">11月7日 22:47</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">铁</div>
+              <div class="comment-body">
+                <div class="comment-name">铁羽</div>
+                <div class="comment-text">《白虎机甲》肩部结构确实有问题，液压杆位置跟肩胛骨运动轨迹打架。霜刃赛重做，这次先把骨骼逻辑跑通再上装备。</div>
+                <div class="comment-time">11月7日 20:31</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">路</div>
+              <div class="comment-body">
+                <div class="comment-name">路过看展的</div>
+                <div class="comment-text">冰脊那个渲染时长看得我眼睛疼。225小时换12秒，值不值另说，但我确实记住了这件作品。</div>
+                <div class="comment-time">11月7日 18:15</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">山</div>
+              <div class="comment-body">
+                <div class="comment-name">山阴</div>
+                <div class="comment-text">七层墨色配比公开之后有人私信问为什么不用矿物颜料。因为宣纸吃不住，渗出去就救不回来了。就这么简单。</div>
+                <div class="comment-time">11月7日 15:40</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">白</div>
+              <div class="comment-body">
+                <div class="comment-name">白砚</div>
+                <div class="comment-text">直播拆图层那次说了远景对比度压到13%，有人问是不是太狠了。其实还能再低，但再低雪雾就糊成一片了。</div>
+                <div class="comment-time">11月6日 23:08</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">砚</div>
+              <div class="comment-body">
+                <div class="comment-name">砚秋</div>
+                <div class="comment-text">《霜纹笔记》被选成课堂参考这件事，我第一反应是“那7版废稿终于没白画”。</div>
+                <div class="comment-time">11月6日 19:22</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">路</div>
+              <div class="comment-body">
+                <div class="comment-name">路过的设计师</div>
+                <div class="comment-text">断纹那件两极分化不奇怪。负空间玩得好是巧，玩过头就是空。6.8分的细节丰富度不是乱给的。</div>
+                <div class="comment-time">11月6日 14:05</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">新</div>
+              <div class="comment-body">
+                <div class="comment-name">新来的</div>
+                <div class="comment-text">问一下，白虎主题必须用白色吗？看到有件背景是深灰的也入围了。</div>
+                <div class="comment-time">11月6日 10:50</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">评</div>
+              <div class="comment-body">
+                <div class="comment-name">评委助理小周</div>
+                <div class="comment-text">回楼上：细则里没规定底色，但“白虎”的识别特征主要靠白底黑纹的对比关系。深灰底那件是靠高光和纹路走向撑起来的，评委讨论了很久。</div>
+                <div class="comment-time">11月6日 11:20</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">动</div>
+              <div class="comment-body">
+                <div class="comment-name">动画组老李</div>
+                <div class="comment-text">虎纹频率那288帧我逐帧看了，第144帧的音频映射对得最准，后面稍微有点飘。但方法论确实可复现，这点比精度重要。</div>
+                <div class="comment-time">11月5日 21:33</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">路</div>
+              <div class="comment-body">
+                <div class="comment-name">路人甲</div>
+                <div class="comment-text">不太懂画，就觉得白夜巡猎好看。至于后腿角度……雪地里谁看得清腿啊。</div>
+                <div class="comment-time">11月5日 17:12</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">冷</div>
+              <div class="comment-body">
+                <div class="comment-name">冷杉</div>
+                <div class="comment-text">6月9日大赛的回顾长片47分钟，评委圆桌那段占了22分钟。其他25分钟分给12组选手，每组两分钟出头，剪得有点碎。</div>
+                <div class="comment-time">11月5日 12:44</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">南</div>
+              <div class="comment-body">
+                <div class="comment-name">南窗</div>
+                <div class="comment-text">霜刃主题赛加解剖学顾问这个操作，对画角色的人来说是好事。之前全是视觉评委，结构错了也没人指出来。</div>
+                <div class="comment-time">11月4日 20:18</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">阿</div>
+              <div class="comment-body">
+                <div class="comment-name">阿茶</div>
+                <div class="comment-text">刚投了霜刃赛，三视图加五件装备，画到第三件的时候发现前面两件的接缝方向画反了。重画。</div>
+                <div class="comment-time">11月4日 16:02</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section" id="news">
+          <div class="section-header">
+            <h2>赛事与创作动态</h2>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-date-box">
+                <div class="nd-day">08</div>
+                <div class="nd-month">11月</div>
+              </div>
+              <div class="news-content">
+                <h3>霜刃主题赛入围名单公示，38件作品进入终审</h3>
+                <p>数字绘画21件、3D渲染9件、其他8件。评分表同步公开，纹样项与动态项权重各占30%。终审结果预计11月22日公布。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date-box">
+                <div class="nd-day">06</div>
+                <div class="nd-month">11月</div>
+              </div>
+              <div class="news-content">
+                <h3>6月9日大赛回顾长片上线47分钟版</h3>
+                <p>收录12组选手访谈与6位评委圆桌。霜刃在片中回应了《白夜巡猎》后腿角度争议，承认“冰裂纹铺太满，遮挡了结构”。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date-box">
+                <div class="nd-day">05</div>
+                <div class="nd-month">11月</div>
+              </div>
+              <div class="news-content">
+                <h3>北岭点评《霜刃：零》装备逻辑，对照图可下载</h3>
+                <p>评审细则参考案例新增“护甲接缝对齐虎纹肌理走向”条目。两所院校已将该对照图选入角色设计课程材料。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date-box">
+                <div class="nd-day">03</div>
+                <div class="nd-month">11月</div>
+              </div>
+              <div class="news-content">
+                <h3>第14期白虎角色设计赛开放投稿，截稿11月20日</h3>
+                <p>主题“霜刃”，要求三视图加至少四件装备拆解。评审团新增解剖学顾问一人，专门复核猫科运动逻辑。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date-box">
+                <div class="nd-day">02</div>
+                <div class="nd-month">11月</div>
+              </div>
+              <div class="news-content">
+                <h3>《虎纹频率》逐帧源文件下载量破1200次</h3>
+                <p>288帧PSD与音频映射表打包上传两天内下载量超过1200次。选手在说明文档里标注了每一帧对应的音频频段。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date-box">
+                <div class="nd-day">26</div>
+                <div class="nd-month">10月</div>
+              </div>
+              <div class="news-content">
+                <h3>6月9日大赛评分细则修订：新增符号堆砌扣分条款</h3>
+                <p>纹样覆盖面积超过主体轮廓线条米数1.5倍时，轮廓可读性项扣1分。霜刃主题赛首次生效，已有4件投稿被扣分。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section" id="related">
+          <div class="section-header">
+            <h2>同主题创作方向索引</h2>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#featured">白夜巡猎</a>
+            <a href="/#featured">冰脊</a>
+            <a href="/#featured">霜刃：零</a>
+            <a href="/#featured">断纹</a>
+            <a href="/#featured">雪岭双雄</a>
+            <a href="/#featured">虎纹频率</a>
+            <a href="/#analysis">没骨画法白虎</a>
+            <a href="/#analysis">猫科关节角度参考</a>
+            <a href="/#guide">轮廓可读性测试</a>
+            <a href="/#guide">毛发解算精度</a>
+            <a href="/#categories">矢量负空间</a>
+            <a href="/#categories">机械骨骼外露</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块：榜单 + 投稿互动 -->
+        <section class="section" id="rank">
+          <div class="section-header">
+            <h2>6月9日大赛人气榜</h2>
+          </div>
+          <div class="rank-list">
+            <div class="rank-item">
+              <span class="rank-num top1">1</span>
+              <div class="rank-info">
+                <div class="rank-title">白夜巡猎</div>
+                <div class="rank-sub">霜刃 · 数字绘画 · 纹样项9.2</div>
+              </div>
+              <span class="rank-score">9.2</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num top2">2</span>
+              <div class="rank-info">
+                <div class="rank-title">冰脊</div>
+                <div class="rank-sub">3D渲染 · 技术执行项8.9</div>
+              </div>
+              <span class="rank-score">8.9</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num top3">3</span>
+              <div class="rank-info">
+                <div class="rank-title">霜纹笔记</div>
+                <div class="rank-sub">砚秋 · 设定集 · 32页手绘稿</div>
+              </div>
+              <span class="rank-score">8.8</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">4</span>
+              <div class="rank-info">
+                <div class="rank-title">霜刃：零</div>
+                <div class="rank-sub">北岭 · 角色设定 · 六件装备拆解</div>
+              </div>
+              <span class="rank-score">8.7</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">5</span>
+              <div class="rank-info">
+                <div class="rank-title">雪岭双雄</div>
+                <div class="rank-sub">白砚 · 场景概念 · 双虎构图</div>
+              </div>
+              <span class="rank-score">8.5</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">6</span>
+              <div class="rank-info">
+                <div class="rank-title">虎纹频率</div>
+                <div class="rank-sub">288帧 · 动态设计 · 可复现方法</div>
+              </div>
+              <span class="rank-score">8.4</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">7</span>
+              <div class="rank-info">
+                <div class="rank-title">白虎机甲</div>
+                <div class="rank-sub">铁羽 · 机械设定 · 23个关节标注</div>
+              </div>
+              <span class="rank-score">8.2</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">8</span>
+              <div class="rank-info">
+                <div class="rank-title">巡山</div>
+                <div class="rank-sub">山阴 · 水墨 · 七层墨色积染</div>
+              </div>
+              <span class="rank-score">8.1</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 投稿互动 -->
+        <section class="section" id="interact">
+          <div class="interact-panel">
+            <div>
+              <h3>第14期白虎角色设计赛 · 霜刃</h3>
+              <p>投稿截止11月20日23:59。要求三视图加至少四件装备拆解，评审团新增解剖学顾问。已有27人提交作品，入围名单预计11月22日公示。</p>
+            </div>
+            <a href="/#updates" class="btn-primary">查看投稿细则</a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="sidebar" aria-label="辅助信息">
+        <div class="sidebar-card">
+          <h3>今日更新</h3>
+          <ul class="side-list">
+            <li><span class="side-dot"></span><a href="/#updates" class="side-link">霜刃赛入围公示</a><span class="side-meta">11/8</span></li>
+            <li><span class="side-dot"></span><a href="/#updates" class="side-link">回顾长片上线</a><span class="side-meta">11/6</span></li>
+            <li><span class="side-dot"></span><a href="/#updates" class="side-link">北岭点评对照图</a><span class="side-meta">11/5</span></li>
+            <li><span class="side-dot"></span><a href="/#updates" class="side-link">霜刃主题赛投稿</a><span class="side-meta">11/3</span></li>
+            <li><span class="side-dot"></span><a href="/#updates" class="side-link">虎纹频率源文件</a><span class="side-meta">11/2</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>评委关注项</h3>
+          <ul class="side-list">
+            <li><span class="side-dot"></span><span>纹样再设计 30%</span></li>
+            <li><span class="side-dot"></span><span>动态张力 30%</span></li>
+            <li><span class="side-dot"></span><span>完成度 25%</span></li>
+            <li><span class="side-dot"></span><span>技术执行 15%</span></li>
+            <li><span class="side-dot"></span><span>轮廓可读性扣分线 1.5x</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>热门标签</h3>
+          <div class="tag-cloud" style="gap:6px;">
+            <a href="/#featured">霜刃</a>
+            <a href="/#featured">冰裂纹</a>
+            <a href="/#featured">毛发解算</a>
+            <a href="/#guide">轮廓可读性</a>
+            <a href="/#analysis">猫科解剖</a>
+            <a href="/#featured">负空间</a>
+            <a href="/#analysis">装备逻辑</a>
+            <a href="/#guide">帧率与体积</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#2d2d4a"/>
+              <path d="M16 6L20 14H26L21 19L23 27L16 22L9 27L11 19L6 14H12Z" fill="#e6b800"/>
+            </svg>
+            <span>每日大赛</span>
+          </div>
+          <p>覆盖2026年6月至11月白虎主题赛事条目，含数字绘画、3D渲染、角色设定与混合媒介四类作品。每日更新赛程与评审细则变动。</p>
+        </div>
+        <div class="footer-col">
+          <h4>赛事</h4>
+          <ul>
+            <li><a href="/#overview">6月9日大赛</a></li>
+            <li><a href="/#updates">霜刃主题赛</a></li>
+            <li><a href="/#rank">人气榜单</a></li>
+            <li><a href="/#interact">投稿入口</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>作品</h4>
+          <ul>
+            <li><a href="/#featured">数字绘画</a></li>
+            <li><a href="/#featured">3D渲染</a></li>
+            <li><a href="/#featured">角色设定</a></li>
+            <li><a href="/#featured">混合媒介</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>参考</h4>
+          <ul>
+            <li><a href="/#analysis">评分细则</a></li>
+            <li><a href="/#guide">观赛指南</a></li>
+            <li><a href="/#faq">规则问答</a></li>
+            <li><a href="/#comments">选手留言</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 每日大赛 内容聚合示例 · 条目与数据为演示用途</span>
+        <span>最近更新：2026年11月8日 · 对应条目：霜刃赛入围公示</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "每日大赛 6月9日大赛 白虎",
+    "description": "白虎主题视觉作品与赛事聚合，含6月9日大赛赛果、精选作品、评分细则与选手评论。",
+    "url": ""
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "6月9日大赛的评分权重是怎么分配的？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "纹样再设计占30%，动态张力占30%，完成度占25%，技术执行占15%。其中动态张力项在角色设定组里替换为“结构逻辑”，权重不变。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "白虎风格里“纹样堆砌”的判定标准是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "10月26日修订版细则给出了量化线——纹样覆盖面积超过主体轮廓线条米数的1.5倍时，轮廓可读性项扣1分。评委在初筛时会用缩略图测试。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《冰脊》的毛发精度最高，为什么总分不是第一？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "技术执行项8.9分确实是3D组最高，但完成度项只有7.2分。展示视频在第4秒和第7秒各有一处卡顿，评委按“播放流畅度”子项扣了分。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "角色设定组的“装备逻辑”具体看什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "看装备接缝与身体结构的关系。《霜刃：零》的六件装备接缝全部沿着虎纹肌理走向延伸，没有一条横切纹路。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "霜刃主题赛的投稿截止和评审变化？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "11月3日开放投稿，截止11月20日23:59。要求提交三视图和至少四件装备拆解。评审团增加了一位解剖学顾问。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "白虎主题的动态作品和静态作品在评审上有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "动态作品走“3D与动态”组，评分表里多了播放流畅度子项，权重12%。静态作品不评流畅度，纹样项和轮廓可读性项的权重不变。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- 交互脚本 -->
+  <script>
+    (function() {
+      'use strict';
+
+      // 移动端菜单
+      var hamburger = document.getElementById('hamburgerBtn');
+      var overlay = document.getElementById('mobileOverlay');
+      var panel = document.getElementById('mobilePanel');
+      var closeBtn = document.getElementById('mobileClose');
+
+      function openMenu() {
+        overlay.classList.add('open');
+        panel.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        overlay.classList.remove('open');
+        panel.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
+          if (panel.classList.contains('open')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+
+      // 菜单内链接点击后关闭
+      var mobileLinks = panel ? panel.querySelectorAll('a') : [];
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeMenu();
+        });
+      });
+
+      // Esc 关闭菜单
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel && panel.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+
+      // 回到顶部
+      var backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 搜索过滤
+      var searchInput = document.getElementById('searchInput');
+      var searchBtn = document.getElementById('searchBtn');
+      var cardGrid = document.getElementById('cardGrid');
+      var noResultMsg = document.getElementById('noResultMsg');
+      var allCards = cardGrid ? Array.from(cardGrid.querySelectorAll('.card')) : [];
+
+      function doSearch() {
+        var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        if (!cardGrid) return;
+        var visibleCount = 0;
+
+        allCards.forEach(function(card) {
+          var text = card.textContent.toLowerCase();
+          if (!query || text.indexOf(query) !== -1) {
+            card.classList.remove('hidden-by-filter');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden-by-filter');
+          }
+        });
+
+        if (noResultMsg) {
+          noResultMsg.classList.toggle('show', visibleCount === 0);
+        }
+      }
+
+      if (searchBtn) searchBtn.addEventListener('click', doSearch);
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            doSearch();
+          }
+        });
+        // 输入时实时过滤
+        searchInput.addEventListener('input', doSearch);
+      }
+
+      // 分类筛选
+      var catButtons = document.querySelectorAll('.category-item');
+      catButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var filter = this.getAttribute('data-filter');
+          if (!filter) return;
+          // 滚动到精选区
+          var featured = document.getElementById('featured');
+          if (featured) {
+            featured.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          // 简单高亮对应卡片
+          allCards.forEach(function(card) {
+            var text = card.textContent;
+            if (text.indexOf(filter) !== -1) {
+              card.classList.remove('hidden-by-filter');
+              card.classList.add('filter-highlight');
+              setTimeout(function() { card.classList.remove('filter-highlight'); }, 2000);
+            } else {
+              card.classList.add('hidden-by-filter');
+            }
+          });
+          if (noResultMsg) noResultMsg.classList.remove('show');
+          // 3秒后恢复
+          setTimeout(function() {
+            allCards.forEach(function(card) {
+              card.classList.remove('hidden-by-filter');
+            });
+          }, 3000);
+        });
+      });
+
+      // 侧栏导航滚动高亮
+      var sections = document.querySelectorAll('.main-content .section[id]');
+      var channelLinks = document.querySelectorAll('.channel-list a');
+
+      if (sections.length && channelLinks.length) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var id = entry.target.getAttribute('id');
+              channelLinks.forEach(function(link) {
+                link.classList.toggle('active', link.getAttribute('href') === '/#' + id);
+              });
+            }
+          });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        sections.forEach(function(section) {
+          observer.observe(section);
+        });
+      }
+
+      // 平滑滚动偏移处理（CSS scroll-padding-top 已设置，此处补充锚点点击）
+      document.querySelectorAll('a[href^="/#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var href = this.getAttribute('href');
+          if (href && href.startsWith('/#')) {
+            var targetId = href.substring(2);
+            var target = document.getElementById(targetId);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.pushState(null, null, '#' + targetId);
+            }
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+  </html>
