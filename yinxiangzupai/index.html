@@ -1,0 +1,1638 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>印象足拍摄影全套作品 - 足部写真与风格图集</title>
+  <meta name="description" content="印象足拍摄影全套作品聚合足部特写、丝袜质感、室内外足模等写真图集，提供作品分类、拍摄风格解析与更新动态，适合摄影爱好者与足模收藏者浏览。">
+  <meta name="keywords" content="印象足拍摄影全套作品">
+  <style>
+    /* ---------- 全局变量与重置 ---------- */
+    :root {
+      --color-primary: #8a5a44;
+      --color-primary-light: #b98a6e;
+      --color-primary-dark: #5e3a28;
+      --color-bg: #faf7f4;
+      --color-surface: #ffffff;
+      --color-text-primary: #2d241f;
+      --color-text-secondary: #6b5b52;
+      --color-text-tertiary: #9c8b82;
+      --color-divider: #e5ddd7;
+      --radius-card: 14px;
+      --radius-btn: 30px;
+      --radius-tag: 6px;
+      --shadow-default: 0 2px 10px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.08);
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      --spacing-section: 2.8rem;
+      --max-width: 1360px;
+      --sticky-offset: 108px; /* 公告条 + 页头高度 */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: var(--radius-card);
+    }
+
+    /* ---------- 布局容器 ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ---------- 吸顶公告条 ---------- */
+    .announcement-bar {
+      background-color: var(--color-primary-dark);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 8px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      line-height: 1.4;
+    }
+
+    .announcement-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 24px;
+    }
+
+    .announcement-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .announcement-item .date {
+      background: rgba(255,255,255,0.2);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    /* ---------- 页头 + 吸顶 ---------- */
+    .site-header {
+      background: var(--color-surface);
+      box-shadow: var(--shadow-default);
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      padding: 12px 0;
+      transition: box-shadow 0.2s;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .brand svg {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .main-nav a {
+      color: var(--color-text-secondary);
+      transition: color 0.2s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .main-nav a:hover {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary-light);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-btn);
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      background: transparent;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--color-primary-light);
+      border-color: var(--color-primary-light);
+      color: #fff;
+    }
+
+    /* 移动端菜单按钮 */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--color-primary);
+      padding: 4px 8px;
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero {
+      background: linear-gradient(135deg, #f3e9e2 0%, #faf7f4 100%);
+      padding: 48px 0 40px;
+      margin-bottom: var(--spacing-section);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(185, 138, 110, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 10px 28px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* 首屏装饰图形 */
+    .hero-deco {
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    /* ---------- 三栏主布局 ---------- */
+    .layout-wrapper {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: var(--spacing-section);
+    }
+
+    /* 左栏频道索引 */
+    .channel-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 12px);
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 16px 0;
+      box-shadow: var(--shadow-default);
+    }
+
+    .channel-sidebar h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-tertiary);
+      padding: 0 18px 10px;
+      font-weight: 600;
+    }
+
+    .channel-list {
+      list-style: none;
+    }
+
+    .channel-list li a {
+      display: block;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+    }
+
+    .channel-list li a:hover {
+      background: #f6f0eb;
+      color: var(--color-primary-dark);
+      border-left-color: var(--color-primary-light);
+    }
+
+    /* 中间主内容 */
+    .main-content {
+      min-width: 0;
+    }
+
+    /* 右辅助栏 */
+    .secondary-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 12px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 18px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .sidebar-card h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-divider);
+    }
+
+    .update-list {
+      list-style: none;
+      font-size: 0.85rem;
+    }
+
+    .update-list li {
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--color-divider);
+      color: var(--color-text-secondary);
+    }
+
+    .update-list li:last-child {
+      border-bottom: none;
+    }
+
+    .update-list .update-name {
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+
+    .update-list .update-date {
+      font-size: 0.75rem;
+      color: var(--color-text-tertiary);
+      margin-left: 6px;
+    }
+
+    /* ---------- 通用板块样式 ---------- */
+    .section {
+      margin-bottom: var(--spacing-section);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 22px;
+      background: var(--color-primary-light);
+      border-radius: 2px;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      box-shadow: var(--shadow-default);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 400/300;
+      border-radius: var(--radius-tag);
+      margin-bottom: 12px;
+      background: #f0eae5;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--color-text-primary);
+      line-height: 1.4;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      background: #f3ece7;
+      color: var(--color-primary-dark);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+      flex: 1;
+      margin-bottom: 10px;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--color-text-tertiary);
+      border-top: 1px solid var(--color-divider);
+      padding-top: 10px;
+      margin-top: auto;
+    }
+
+    /* 紧凑列表 */
+    .compact-list {
+      list-style: none;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 4px 0;
+      box-shadow: var(--shadow-default);
+    }
+
+    .compact-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--color-divider);
+      font-size: 0.92rem;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .compact-list li:last-child {
+      border-bottom: none;
+    }
+
+    .compact-list .item-name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .compact-list .item-desc {
+      color: var(--color-text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .compact-list .item-date {
+      color: var(--color-text-tertiary);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    /* 分类入口标签云 */
+    .category-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category-tag {
+      background: var(--color-surface);
+      padding: 8px 18px;
+      border-radius: var(--radius-btn);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      box-shadow: var(--shadow-default);
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .category-tag:hover {
+      background: var(--color-primary-light);
+      color: #fff;
+      border-color: var(--color-primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* 深度解析正文 */
+    .deep-dive {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 28px 30px;
+      box-shadow: var(--shadow-default);
+      line-height: 1.75;
+    }
+
+    .deep-dive h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin: 24px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--color-divider);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      margin-bottom: 14px;
+      color: var(--color-text-secondary);
+    }
+
+    .deep-dive ul {
+      margin: 10px 0 16px 20px;
+      color: var(--color-text-secondary);
+    }
+
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    .deep-dive strong {
+      color: var(--color-primary-dark);
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 16px;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-default);
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: var(--color-primary-light);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--color-text-primary);
+    }
+
+    .step-content p {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    details {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 0 18px;
+      box-shadow: var(--shadow-default);
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    details[open] {
+      border-color: var(--color-primary-light);
+    }
+
+    summary {
+      font-weight: 600;
+      padding: 14px 0;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      color: var(--color-text-primary);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--color-primary-light);
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    details p {
+      padding: 0 0 16px 0;
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+    }
+
+    .comment-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-default);
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: var(--color-text-secondary);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comment-user {
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .comment-text {
+      flex: 1;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .news-item {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .news-item h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--color-primary-dark);
+    }
+
+    .news-meta {
+      font-size: 0.75rem;
+      color: var(--color-text-tertiary);
+      margin-bottom: 6px;
+    }
+
+    .news-summary {
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* 相关推荐标签索引 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rec-tag {
+      background: var(--color-surface);
+      padding: 6px 14px;
+      border-radius: var(--radius-tag);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--color-divider);
+      transition: all 0.15s;
+    }
+
+    .rec-tag:hover {
+      background: var(--color-primary-light);
+      color: #fff;
+      border-color: var(--color-primary-light);
+    }
+
+    /* 榜单 */
+    .ranking-list {
+      list-style: none;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 4px 0;
+    }
+
+    .ranking-list li {
+      display: flex;
+      align-items: center;
+      padding: 10px 18px;
+      border-bottom: 1px solid var(--color-divider);
+      gap: 12px;
+      font-size: 0.9rem;
+    }
+
+    .ranking-list li:last-child {
+      border-bottom: none;
+    }
+
+    .rank-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #f0e7e2;
+      color: var(--color-primary-dark);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .rank-num.top3 {
+      background: var(--color-primary-light);
+      color: #fff;
+    }
+
+    .rank-name {
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .rank-score {
+      color: var(--color-text-tertiary);
+      font-size: 0.78rem;
+    }
+
+    /* 投稿互动区 */
+    .submit-box {
+      background: linear-gradient(120deg, #f5ede8, #faf7f4);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .submit-box h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+    }
+
+    .submit-box p {
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+      max-width: 500px;
+    }
+
+    /* ---------- 页脚 ---------- */
+    .site-footer {
+      background: var(--color-primary-dark);
+      color: #e0d5cf;
+      padding: 40px 0 24px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 6px;
+    }
+
+    .footer-col a {
+      font-size: 0.82rem;
+      color: #cfc0b8;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 20px;
+      font-size: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      color: #b8a89f;
+    }
+
+    /* ---------- 回到顶部 ---------- */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+      z-index: 90;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--color-primary-dark);
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1024px) {
+      .layout-wrapper {
+        grid-template-columns: 1fr 240px;
+      }
+      .channel-sidebar {
+        display: none;
+      }
+      .main-nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .layout-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .secondary-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .sidebar-card {
+        flex: 1 1 200px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .announcement-inner {
+        gap: 8px 16px;
+        font-size: 0.75rem;
+      }
+      .hero {
+        padding: 32px 0 28px;
+      }
+      .deep-dive {
+        padding: 20px 18px;
+      }
+      .step-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .submit-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* 移动端菜单（纯CSS兼容） */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--sticky-offset);
+      left: 0;
+      right: 0;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-hover);
+      padding: 16px 20px;
+      z-index: 98;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      padding: 8px 0;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      border-bottom: 1px solid var(--color-divider);
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    /* 遮罩 */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 97;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    /* 焦点可见 */
+    :focus-visible {
+      outline: 2px solid var(--color-primary-light);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <!-- 吸顶公告条 -->
+  <div class="announcement-bar" role="banner">
+    <div class="container announcement-inner">
+      <span class="announcement-item">
+        <span class="date">2026-11-08</span>
+        <span>「暖光足尖」室内系列新增 12 套</span>
+      </span>
+      <span class="announcement-item">
+        <span class="date">2026-11-05</span>
+        <span>丝袜质感专题 Vol.3 上线</span>
+      </span>
+      <span class="announcement-item">
+        <span>第 47 期足模投票进行中</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 页头 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="#8a5a44" stroke-width="2"/>
+          <path d="M14 24c0-4 2-8 6-10s7-1 8 3-1 8-5 10-9 1-9-3z" fill="#b98a6e" opacity="0.7"/>
+          <circle cx="22" cy="18" r="2" fill="#5e3a28"/>
+        </svg>
+        <span>印象足拍摄影全套作品</span>
+      </div>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="/#featured">精选作品</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#categories">分类索引</a>
+        <a href="/#deep">风格解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-outline" aria-label="投稿入口">投稿</button>
+        <button class="hamburger" id="menuToggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 移动端菜单 -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+    <a href="/#featured">精选作品</a>
+    <a href="/#latest">最新更新</a>
+    <a href="/#categories">分类索引</a>
+    <a href="/#deep">风格解析</a>
+    <a href="/#guide">体验指南</a>
+    <a href="/#faq">常见问答</a>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>印象足拍摄影全套作品</h1>
+        <p class="hero-desc">聚合足部特写、丝袜质感、室内私房与户外足模等写真图集，按套图完整收录，提供风格标签、拍摄花絮与更新动态。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="/#featured">浏览全套图集</a>
+          <a class="btn-outline" href="/#latest">查看今日更新</a>
+        </div>
+      </div>
+      <svg class="hero-deco" width="200" height="140" viewBox="0 0 200 140" fill="none" aria-hidden="true">
+        <ellipse cx="100" cy="130" rx="90" ry="12" fill="#b98a6e" opacity="0.15"/>
+        <path d="M60 90 Q80 40 120 50 Q150 60 140 95 Q130 120 100 115 Q80 110 60 90Z" stroke="#8a5a44" stroke-width="1.5" fill="#f3e9e2" opacity="0.5"/>
+        <circle cx="110" cy="70" r="4" fill="#b98a6e"/>
+        <circle cx="95" cy="85" r="3" fill="#b98a6e"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 主内容区三栏 -->
+  <div class="container layout-wrapper">
+    <!-- 左频道索引 -->
+    <aside class="channel-sidebar" aria-label="频道索引">
+      <h2>频道索引</h2>
+      <ul class="channel-list">
+        <li><a href="/#featured">精选套图</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#categories">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#ranking">热门榜单</a></li>
+        <li><a href="/#submit">投稿互动</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中主内容 -->
+    <main class="main-content">
+      <!-- 领域概览 -->
+      <section id="overview" class="section">
+        <h2 class="section-title">足拍摄影领域概览</h2>
+        <div style="background: var(--color-surface); border-radius: var(--radius-card); padding: 24px 28px; box-shadow: var(--shadow-default); line-height: 1.75; color: var(--color-text-secondary);">
+          <p>足拍摄影以足部、脚踝、小腿线条为核心拍摄对象，涵盖室内私房、户外自然、丝袜质感、赤足特写、足模摆姿等子方向。按套图系列划分，常见有“暖光足尖”“暗调丝绒”“晨光露台”等主题。拍摄风格从柔和日系到硬光质感均有分布，模特的足弓弧度、脚趾排列、皮肤质感成为收藏者关注的具体指标。2026年11月，足模社区每周新增套图约 30–50 套，其中丝袜类占比约四成，赤足类约三成半，户外类约两成半。</p>
+          <p>足拍摄影的图集通常包含 40–120 张成片，附带拍摄参数、灯光布置与模特足部尺寸数据。值得注意的近期方向是“低饱和暖灰调”在室内私房中的普及，以及足模联动企划（如“双人足部对比”）的增加。收藏者对套图完整度、原图分辨率、是否有花絮视频的要求正逐步细化。</p>
+        </div>
+      </section>
+
+      <!-- 精选作品推荐 -->
+      <section id="featured" class="section">
+        <h2 class="section-title">精选套图推荐</h2>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/foot01/400/300" alt="暖光足尖系列室内足部特写" width="400" height="300" loading="lazy">
+            <h3>暖光足尖 Vol.12</h3>
+            <div class="card-tags"><span class="tag">室内私房</span><span class="tag">暖光</span><span class="tag">赤足</span></div>
+            <p class="card-desc">侧逆光勾勒足弓曲线，木地板与亚麻布景搭配，共 82 张成片，附布光示意图。</p>
+            <div class="card-meta"><span>更新 2026-11-08</span><span>热度 9.2k</span></div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/foot02/400/300" alt="丝袜质感特写黑丝足尖系列" width="400" height="300" loading="lazy">
+            <h3>暗调丝绒 Vol.3</h3>
+            <div class="card-tags"><span class="tag">丝袜</span><span class="tag">暗调</span><span class="tag">棚拍</span></div>
+            <p class="card-desc">20D 黑丝与哑光背景纸对比，脚背绷直特写占 40%，含 3 段慢动作花絮。</p>
+            <div class="card-meta"><span>更新 2026-11-05</span><span>热度 8.7k</span></div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/foot03/400/300" alt="晨光露台户外足模赤足系列" width="400" height="300" loading="lazy">
+            <h3>晨光露台 Vol.7</h3>
+            <div class="card-tags"><span class="tag">户外</span><span class="tag">自然光</span><span class="tag">赤足</span></div>
+            <p class="card-desc">清晨 7 点露台逆光，露水与木纹细节清晰，模特足长 23.5cm，附拍摄时间表。</p>
+            <div class="card-meta"><span>更新 2026-11-03</span><span>热度 7.9k</span></div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/foot04/400/300" alt="白袜棉质足部特写系列" width="400" height="300" loading="lazy">
+            <h3>棉白日常 Vol.4</h3>
+            <div class="card-tags"><span class="tag">白袜</span><span class="tag">居家</span><span class="tag">软光</span></div>
+            <p class="card-desc">纯棉短袜与浅色床单，突出脚踝到脚趾的过渡线条，共 64 张，含足底特写 8 张。</p>
+            <div class="card-meta"><span>更新 2026-10-29</span><span>热度 6.5k</span></div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/foot05/400/300" alt="水光足部特写浅水拍摄" width="400" height="300" loading="lazy">
+            <h3>浅水足影 Vol.2</h3>
+            <div class="card-tags"><span class="tag">水景</span><span class="tag">赤足</span><span class="tag">高调</span></div>
+            <p class="card-desc">浅水盆中足部入水瞬间，高速快门凝固水珠，主光 1/2000s，附参数表。</p>
+            <div class="card-meta"><span>更新 2026-10-26</span><span>热度 8.1k</span></div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/foot06/400/300" alt="复古胶片足部特写" width="400" height="300" loading="lazy">
+            <h3>胶片足记 Vol.1</h3>
+            <div class="card-tags"><span class="tag">胶片</span><span class="tag">复古</span><span class="tag">暖调</span></div>
+            <p class="card-desc">Portra 400 拍摄，颗粒感明显，足弓与脚趾缝细节保留完整，共 36 张。</p>
+            <div class="card-meta"><span>更新 2026-10-22</span><span>热度 7.2k</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section id="latest" class="section">
+        <h2 class="section-title">最新更新动态</h2>
+        <ul class="compact-list">
+          <li><span class="item-name">暖光足尖 Vol.12</span><span class="item-desc">新增 12 套室内赤足图，含布光图</span><span class="item-date">2026-11-08</span></li>
+          <li><span class="item-name">丝袜质感专题 Vol.3</span><span class="item-desc">20D 黑丝系列，28 张特写</span><span class="item-date">2026-11-05</span></li>
+          <li><span class="item-name">晨光露台 Vol.7</span><span class="item-desc">户外自然光赤足，拍摄时间表已补</span><span class="item-date">2026-11-03</span></li>
+          <li><span class="item-name">棉白日常 Vol.4</span><span class="item-desc">白袜居家系列，足底特写 8 张</span><span class="item-date">2026-10-29</span></li>
+          <li><span class="item-name">浅水足影 Vol.2</span><span class="item-desc">水花凝固参数表公开</span><span class="item-date">2026-10-26</span></li>
+          <li><span class="item-name">胶片足记 Vol.1</span><span class="item-desc">Portra 400 拍摄，颗粒感保留</span><span class="item-date">2026-10-22</span></li>
+          <li><span class="item-name">暗调丝绒 Vol.2 补档</span><span class="item-desc">补发 15 张未公开侧拍</span><span class="item-date">2026-10-18</span></li>
+          <li><span class="item-name">足模尺寸档案更新</span><span class="item-desc">新增 6 位模特足长/足宽数据</span><span class="item-date">2026-10-15</span></li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section id="categories" class="section">
+        <h2 class="section-title">分类入口</h2>
+        <div class="category-tags">
+          <a class="category-tag" href="/#featured">室内私房</a>
+          <a class="category-tag" href="/#featured">丝袜质感</a>
+          <a class="category-tag" href="/#featured">户外自然光</a>
+          <a class="category-tag" href="/#featured">赤足特写</a>
+          <a class="category-tag" href="/#featured">白袜居家</a>
+          <a class="category-tag" href="/#featured">水景足影</a>
+          <a class="category-tag" href="/#featured">胶片复古</a>
+          <a class="category-tag" href="/#featured">双人联动</a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section id="deep" class="section">
+        <h2 class="section-title">足拍摄影风格解析</h2>
+        <div class="deep-dive">
+          <h3>赤足与丝袜：两种质感路径的分野</h3>
+          <p>赤足类套图的核心看点是皮肤纹理、足弓弧度与脚趾自然排列。2026 年 10 月“暖光足尖 Vol.11”中，摄影师用 85mm 镜头在 f/2.8 下拍摄，脚背高光与脚底阴影过渡保留了 2.3 档动态范围，脚趾缝的细节在 100% 放大下仍可辨识。丝袜类则依赖织物密度与光线的互动——20D 黑丝在硬光下易产生高光溢出，需要柔光箱加格栅控制。同一模特在“暗调丝绒 Vol.2”中足背绷直角度为 35°，而“暖光足尖 Vol.11”中为 50°，前者显足弓，后者显脚踝。</p>
+          <h3>套图完整度的判断维度</h3>
+          <p>一套足拍摄影作品是否值得收藏，可以从三个可核对项入手：成片数量是否达到 60 张以上、是否包含至少 5 个不同机位（正面、侧面、俯拍、仰拍、足底）、是否附带拍摄参数或花絮。以“晨光露台 Vol.7”为例，成片 78 张，机位 7 个，附拍摄时间表与 ISO/光圈值，三项齐全。而“胶片足记 Vol.1”成片 36 张，机位 4 个，虽缺足底视角，但胶片颗粒与色彩偏移构成独特风格，属于单项突出型。</p>
+          <h3>低饱和暖灰调的布光差异</h3>
+          <p>2026 年秋季开始，室内私房足拍流行低饱和暖灰调。具体布光差异在于：主光从 45° 侧逆光改为 70° 高位侧光，色温从 5500K 降到 4800K，白平衡偏移加 2 琥珀。这种调整使足部阴影更柔和，但需要模特足弓保持更长时间。据“暖光足尖”系列摄影师在 10 月 20 日发布的布光笔记，单套图拍摄时间从 3.5 小时增加到 5 小时，出片率从 12% 降至 8%。</p>
+          <h3>足模档案的可核对信息结构</h3>
+          <p>站内足模档案目前记录 16 位模特的数据，每份包含：足长（cm）、足宽（cm）、脚趾排列类型（埃及脚/希腊脚/罗马脚）、常用鞋码、拍摄风格偏好。以模特“小鹿”为例，足长 23.5cm、足宽 8.6cm、埃及脚、常合作丝袜类拍摄。这些数据在挑选套图时可直接比对——若收藏者偏好希腊脚第二趾突出的线条，可筛选档案中标注希腊脚的 5 位模特。档案每两周更新一次，最近更新日期为 2026-10-15。</p>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section id="guide" class="section">
+        <h2 class="section-title">套图体验指南</h2>
+        <div class="guide-steps">
+          <div class="step-item">
+            <span class="step-num">1</span>
+            <div class="step-content">
+              <h3>先看成片数量与机位覆盖</h3>
+              <p>60 张以上、5 个机位是基础线。低于 40 张的套图通常只适合快速浏览，不适合作为收藏或参考布光。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-num">2</span>
+            <div class="step-content">
+              <h3>对照足模档案筛选风格</h3>
+              <p>偏好赤足细节的，优先选脚趾排列清晰、档案中标注“赤足为主”的模特；偏好丝袜质感的，看模特足背绷直角度是否在 30°–40° 之间。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-num">3</span>
+            <div class="step-content">
+              <h3>比较布光说明的完整度</h3>
+              <p>附带布光图、ISO/光圈/快门数值的套图，参考价值高于纯成片展示。未注明参数的套图，只能作为氛围参考。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-num">4</span>
+            <div class="step-content">
+              <h3>决定是否追更整个系列</h3>
+              <p>系列套图通常每 2–3 周更新一卷。若前三卷机位与模特保持稳定，且花絮内容持续增加，可考虑追更；若卷与卷之间风格跳跃过大，建议单卷收藏。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <h2 class="section-title">常见问答</h2>
+        <div class="faq-list">
+          <details>
+            <summary>足拍摄影套图一般包含多少张成片？</summary>
+            <p>主流套图在 60–120 张之间。室内私房类通常 80 张左右，户外自然光类 50–70 张，丝袜特写类因场景集中可到 40–60 张。低于 40 张的套图一般属于单次拍摄的精选集。</p>
+          </details>
+          <details>
+            <summary>赤足和丝袜类套图在布光上有什么主要区别？</summary>
+            <p>赤足类多用侧逆光或高位侧光突出足弓与皮肤纹理，色温偏暖（4800–5200K）；丝袜类需要控制织物高光，常用柔光箱加蜂巢格栅，主光角度更低（30°–45°），避免反光溢出。</p>
+          </details>
+          <details>
+            <summary>足模档案里的“埃及脚”“希腊脚”指什么？</summary>
+            <p>埃及脚是大脚趾最长，脚趾长度依次递减；希腊脚是第二脚趾最长；罗马脚是前三个脚趾长度接近。足拍摄影中，希腊脚常用来强调第二趾的突出线条，埃及脚则更适合正面平视构图。</p>
+          </details>
+          <details>
+            <summary>套图附带的拍摄参数具体包括哪些项目？</summary>
+            <p>通常包括：相机型号、镜头焦距、光圈值、快门速度、ISO、白平衡偏移、主光与辅光位置、色温值。部分套图还会标注模特足部与镜头的距离。</p>
+          </details>
+          <details>
+            <summary>“暖光足尖”系列目前出了多少卷？</summary>
+            <p>截至 2026 年 11 月 8 日，暖光足尖系列共发布 12 卷，累计成片 940 余张。最新 Vol.12 于 11 月 8 日更新，新增 82 张室内赤足图与 2 段花絮。</p>
+          </details>
+          <details>
+            <summary>如何判断一套足拍图集的收藏价值？</summary>
+            <p>可核对三项：成片数量是否达到 60 张、机位是否覆盖 5 个以上角度、是否附带布光参数或花絮。三项齐全的套图参考价值较高；单项突出（如胶片质感独特）的也可单独收藏，但不宜作为布光学习的主要参考。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section id="comments" class="section">
+        <h2 class="section-title">用户评论</h2>
+        <div class="comment-grid">
+          <div class="comment-card"><div class="comment-user">@阿足</div><div class="comment-text">暖光足尖 Vol.12 的脚趾缝细节真的顶，100% 放大都没糊。</div></div>
+          <div class="comment-card"><div class="comment-user">@丝绒控</div><div class="comment-text">暗调丝绒 Vol.3 黑丝反光控制得不错，就是花絮太短了，才 3 段。</div></div>
+          <div class="comment-card"><div class="comment-user">@南风</div><div class="comment-text">晨光露台系列追到第 7 卷了，木纹和露水确实有清晨的感觉。</div></div>
+          <div class="comment-card"><div class="comment-user">@脚踝观察员</div><div class="comment-text">足模档案更新太慢，半个月才 6 个人，想按脚型筛都凑不齐。</div></div>
+          <div class="comment-card"><div class="comment-user">@胶片党</div><div class="comment-text">胶片足记颗粒感保留得可以，但 36 张确实少了点，不够看。</div></div>
+          <div class="comment-card"><div class="comment-user">@小满</div><div class="comment-text">棉白日常那套白袜居家感很足，床单褶皱和脚踝过渡自然。</div></div>
+          <div class="comment-card"><div class="comment-user">@水影</div><div class="comment-text">浅水足影的凝固参数很有用，我照着布光试了两次，水花老是糊。</div></div>
+          <div class="comment-card"><div class="comment-user">@路人甲</div><div class="comment-text">今天才注意到有布光笔记这种内容，之前都只看成片。</div></div>
+          <div class="comment-card"><div class="comment-user">@足弓线条</div><div class="comment-text">暖光足尖 Vol.11 里 50° 绷直那张，脚踝到足弓的过渡绝了。</div></div>
+          <div class="comment-card"><div class="comment-user">@暗调爱好者</div><div class="comment-text">丝袜专题 Vol.3 的 20D 黑丝配哑光纸，背景够干净，就是模特换得有点勤。</div></div>
+          <div class="comment-card"><div class="comment-user">@小柯基</div><div class="comment-text">投稿入口在哪？拍了组自家阳台的赤足，想试试。</div></div>
+          <div class="comment-card"><div class="comment-user">@老猫</div><div class="comment-text">足模投票第 47 期那个叫小鹿的，埃及脚拍正面确实好看。</div></div>
+          <div class="comment-card"><div class="comment-user">@图集收集者</div><div class="comment-text">有些套图标注 90 张，打开只有 70 多，希望数量能标得准一点。</div></div>
+          <div class="comment-card"><div class="comment-user">@浮光</div><div class="comment-text">胶片那套的暖调很舒服，就是颗粒稍粗，看个人口味。</div></div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section id="news" class="section">
+        <h2 class="section-title">相关资讯</h2>
+        <div class="news-list">
+          <article class="news-item">
+            <h3>暖光足尖 Vol.12 更新 82 张成片</h3>
+            <div class="news-meta">2026-11-08 · 套图更新</div>
+            <p class="news-summary">该卷新增布光示意图 3 张，主光角度从上一卷的 45° 调整为 70°，拍摄时长增加至 5 小时。</p>
+          </article>
+          <article class="news-item">
+            <h3>丝袜质感专题 Vol.3 上线 20D 黑丝系列</h3>
+            <div class="news-meta">2026-11-05 · 专题上线</div>
+            <p class="news-summary">共 28 张特写，其中脚背绷直角度集中在 30°–35°，附 2 段慢动作花絮视频。</p>
+          </article>
+          <article class="news-item">
+            <h3>足模档案 10 月更新新增 6 位模特</h3>
+            <div class="news-meta">2026-10-15 · 数据更新</div>
+            <p class="news-summary">新收录模特足长范围 22.8–24.1cm，其中希腊脚 3 位、埃及脚 2 位、罗马脚 1 位。</p>
+          </article>
+          <article class="news-item">
+            <h3>浅水足影 Vol.2 公开凝固参数表</h3>
+            <div class="news-meta">2026-10-26 · 参数公开</div>
+            <p class="news-summary">快门 1/2000s、光圈 f/4、ISO 400，水花凝固成功率从首卷的 43% 提升至 67%。</p>
+          </article>
+          <article class="news-item">
+            <h3>第 47 期足模投票开启，小鹿暂列第一</h3>
+            <div class="news-meta">2026-11-01 · 社区活动</div>
+            <p class="news-summary">投票持续至 11 月 10 日，目前小鹿以 312 票领先，第二名阿沁 287 票。</p>
+          </article>
+          <article class="news-item">
+            <h3>暗调丝绒 Vol.2 补发 15 张未公开侧拍</h3>
+            <div class="news-meta">2026-10-18 · 补档</div>
+            <p class="news-summary">侧拍包含足底与脚踝内侧视角，补档后该卷总成片数达到 76 张。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section id="related" class="section">
+        <h2 class="section-title">相关推荐</h2>
+        <div class="rec-tags">
+          <a class="rec-tag" href="/#featured">暖光足尖 Vol.11 布光分析</a>
+          <a class="rec-tag" href="/#featured">希腊脚模特特写合集</a>
+          <a class="rec-tag" href="/#featured">20D 丝袜布光参数</a>
+          <a class="rec-tag" href="/#featured">户外自然光时间表</a>
+          <a class="rec-tag" href="/#featured">胶片足拍色彩偏移</a>
+          <a class="rec-tag" href="/#featured">足底视角机位图</a>
+          <a class="rec-tag" href="/#featured">足模尺寸档案 2026</a>
+          <a class="rec-tag" href="/#featured">低饱和暖灰调调色</a>
+        </div>
+      </section>
+
+      <!-- 热门榜单 -->
+      <section id="ranking" class="section">
+        <h2 class="section-title">本周热门套图榜</h2>
+        <ul class="ranking-list">
+          <li><span class="rank-num top3">1</span><span class="rank-name">暖光足尖 Vol.12</span><span class="rank-score">热度 9.2k</span></li>
+          <li><span class="rank-num top3">2</span><span class="rank-name">暗调丝绒 Vol.3</span><span class="rank-score">热度 8.7k</span></li>
+          <li><span class="rank-num top3">3</span><span class="rank-name">浅水足影 Vol.2</span><span class="rank-score">热度 8.1k</span></li>
+          <li><span class="rank-num">4</span><span class="rank-name">晨光露台 Vol.7</span><span class="rank-score">热度 7.9k</span></li>
+          <li><span class="rank-num">5</span><span class="rank-name">胶片足记 Vol.1</span><span class="rank-score">热度 7.2k</span></li>
+          <li><span class="rank-num">6</span><span class="rank-name">棉白日常 Vol.4</span><span class="rank-score">热度 6.5k</span></li>
+        </ul>
+      </section>
+
+      <!-- 投稿互动 -->
+      <section id="submit" class="section">
+        <h2 class="section-title">投稿与互动</h2>
+        <div class="submit-box">
+          <div>
+            <h3>分享你的足拍作品</h3>
+            <p>支持上传单张或套图，需注明拍摄参数与模特足部信息。审核通过后进入每周精选池。</p>
+          </div>
+          <button class="btn-primary" aria-label="进入投稿页面">开始投稿</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- 右辅助栏 -->
+    <aside class="secondary-sidebar" aria-label="辅助信息">
+      <div class="sidebar-card">
+        <h3>今日更新</h3>
+        <ul class="update-list">
+          <li><span class="update-name">暖光足尖 Vol.12</span><span class="update-date">11-08</span></li>
+          <li><span class="update-name">丝袜质感 Vol.3</span><span class="update-date">11-05</span></li>
+          <li><span class="update-name">晨光露台 Vol.7</span><span class="update-date">11-03</span></li>
+          <li><span class="update-name">棉白日常 Vol.4</span><span class="update-date">10-29</span></li>
+          <li><span class="update-name">浅水足影 Vol.2</span><span class="update-date">10-26</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>足模档案速览</h3>
+        <ul class="update-list">
+          <li>小鹿 · 23.5cm · 埃及脚</li>
+          <li>阿沁 · 22.8cm · 希腊脚</li>
+          <li>南栀 · 24.1cm · 罗马脚</li>
+          <li>晚晚 · 23.0cm · 希腊脚</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>印象足拍摄影全套作品</h3>
+          <p>收录 2026 年 9 月至 11 月的足拍套图，涵盖室内私房、丝袜质感、户外自然光与赤足特写四类方向，每周更新 3–5 套完整图集。</p>
+        </div>
+        <div class="footer-col">
+          <h4>套图系列</h4>
+          <ul>
+            <li><a href="/#featured">暖光足尖</a></li>
+            <li><a href="/#featured">暗调丝绒</a></li>
+            <li><a href="/#featured">晨光露台</a></li>
+            <li><a href="/#featured">棉白日常</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>分类索引</h4>
+          <ul>
+            <li><a href="/#categories">室内私房</a></li>
+            <li><a href="/#categories">丝袜质感</a></li>
+            <li><a href="/#categories">户外自然光</a></li>
+            <li><a href="/#categories">赤足特写</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>社区</h4>
+          <ul>
+            <li><a href="/#submit">投稿入口</a></li>
+            <li><a href="/#ranking">热门榜单</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 印象足拍摄影全套作品 · 示例内容聚合页</span>
+        <span>最近更新：2026-11-08 · 暖光足尖 Vol.12</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <!-- 交互脚本 -->
+  <script>
+    (function(){
+      // 移动端菜单
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileNav = document.getElementById('mobileNav');
+      const overlay = document.getElementById('overlay');
+      const body = document.body;
+
+      function closeMenu() {
+        mobileNav.classList.remove('open');
+        overlay.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu() {
+        mobileNav.classList.add('open');
+        overlay.classList.add('show');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = mobileNav.classList.contains('open');
+          if (isOpen) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+      }
+
+      if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+      }
+
+      // 移动端导航点击后关闭
+      const mobileLinks = mobileNav.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Esc 关闭
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+
+      // 回到顶部
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 600) {
+            backToTop.classList.add('show');
+          } else {
+            backToTop.classList.remove('show');
+          }
+        });
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "印象足拍摄影全套作品",
+    "description": "聚合足部特写、丝袜质感、室内外足模等写真图集，提供作品分类、拍摄风格解析与更新动态。",
+    "url": ""
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "足拍摄影套图一般包含多少张成片？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "主流套图在 60–120 张之间。室内私房类通常 80 张左右，户外自然光类 50–70 张，丝袜特写类因场景集中可到 40–60 张。低于 40 张的套图一般属于单次拍摄的精选集。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "赤足和丝袜类套图在布光上有什么主要区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "赤足类多用侧逆光或高位侧光突出足弓与皮肤纹理，色温偏暖（4800–5200K）；丝袜类需要控制织物高光，常用柔光箱加蜂巢格栅，主光角度更低（30°–45°），避免反光溢出。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "足模档案里的“埃及脚”“希腊脚”指什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "埃及脚是大脚趾最长，脚趾长度依次递减；希腊脚是第二脚趾最长；罗马脚是前三个脚趾长度接近。足拍摄影中，希腊脚常用来强调第二趾的突出线条，埃及脚则更适合正面平视构图。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "套图附带的拍摄参数具体包括哪些项目？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "通常包括：相机型号、镜头焦距、光圈值、快门速度、ISO、白平衡偏移、主光与辅光位置、色温值。部分套图还会标注模特足部与镜头的距离。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "“暖光足尖”系列目前出了多少卷？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "截至 2026 年 11 月 8 日，暖光足尖系列共发布 12 卷，累计成片 940 余张。最新 Vol.12 于 11 月 8 日更新，新增 82 张室内赤足图与 2 段花絮。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何判断一套足拍图集的收藏价值？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可核对三项：成片数量是否达到 60 张、机位是否覆盖 5 个以上角度、是否附带布光参数或花絮。三项齐全的套图参考价值较高；单项突出（如胶片质感独特）的也可单独收藏，但不宜作为布光学习的主要参考。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+                                      </html>
