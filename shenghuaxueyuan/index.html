@@ -1,0 +1,1968 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>圣华学院动漫全集在线免费观看 - 校园番剧索引</title>
+  <meta name="description" content="圣华学院动漫全集在线免费观看：收录圣华学院系列全季条目、OVA与特别篇，提供分集速览、类型筛选、观众评论与更新动态，适合追校园番的学生党与补番用户。">
+  <meta name="keywords" content="圣华学院动漫全集在线免费观看">
+  <style>
+    /* ---------- 全局变量与重置 ---------- */
+    :root {
+      --primary: #2f5d8a;
+      --primary-light: #4a7ca8;
+      --primary-dark: #1f3f5c;
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --text-primary: #1e2b38;
+      --text-secondary: #4f5f6e;
+      --text-muted: #7b8a9a;
+      --border: #e3e9f0;
+      --radius-card: 14px;
+      --radius-btn: 30px;
+      --radius-tag: 20px;
+      --radius-banner: 18px;
+      --shadow-default: 0 4px 12px rgba(0, 20, 40, 0.06);
+      --shadow-hover: 0 8px 20px rgba(0, 20, 40, 0.12);
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+      --announce-height: 36px;
+      --header-height: 64px;
+      --sticky-offset: calc(var(--announce-height) + var(--header-height));
+      --max-width: 1360px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------- 吸顶公告条 + 页头 ---------- */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-height);
+      background: var(--primary-dark);
+      color: #eef4fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 0.82rem;
+      padding: 0 1rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .announce-bar strong {
+      color: #fff;
+      font-weight: 600;
+      margin-right: 0.4rem;
+    }
+
+    .announce-bar .announce-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .announce-bar .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #9ec5e8;
+      display: inline-block;
+    }
+
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      height: var(--header-height);
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-shrink: 0;
+    }
+
+    .brand svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .brand-text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: -0.3px;
+      white-space: nowrap;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 1.6rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-left: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-nav a:hover {
+      color: var(--primary);
+    }
+
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 0.25rem 0.25rem 0.25rem 1rem;
+      transition: border-color 0.15s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--primary-light);
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 0.85rem;
+      width: 150px;
+      color: var(--text-primary);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-box button {
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      border-radius: var(--radius-btn);
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .search-box button:hover {
+      background: var(--primary-dark);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 0.6rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      line-height: 1;
+      color: var(--text-primary);
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero {
+      background: linear-gradient(135deg, #e8f0fa 0%, #f5f9fe 70%, #ffffff 100%);
+      padding: 3.5rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      flex: 1 1 55%;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 0.25rem 1rem;
+      border-radius: var(--radius-tag);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+      max-width: 16ch;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 44ch;
+      margin-bottom: 1.6rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.7rem 2rem;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+      box-shadow: var(--shadow-default);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary-dark);
+      padding: 0.7rem 2rem;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.15s, background 0.15s;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary-light);
+      background: #f9fcff;
+    }
+
+    .hero-visual {
+      flex: 0 1 38%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-svg {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      filter: drop-shadow(0 8px 24px rgba(47, 93, 138, 0.12));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-svg { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---------- 主内容区：三栏门户 ---------- */
+    .main-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* 左频道索引 */
+    .channel-aside {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 1rem);
+    }
+
+    .channel-aside h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .channel-list a {
+      display: block;
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .channel-list a:hover {
+      background: #e9f0f9;
+      color: var(--primary-dark);
+    }
+
+    .channel-list .active {
+      background: #e3edf9;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* 右侧辅助栏 */
+    .aux-aside {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 1rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .aux-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 1.2rem;
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+    }
+
+    .aux-card h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    .hot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .hot-list li {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      align-items: baseline;
+    }
+
+    .hot-list .rank {
+      font-weight: 700;
+      color: var(--primary-light);
+      font-size: 0.75rem;
+      min-width: 18px;
+    }
+
+    .hot-list a {
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .hot-list a:hover {
+      color: var(--primary);
+    }
+
+    .update-stream {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .update-stream li {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .update-stream li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .update-stream .update-date {
+      font-weight: 600;
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      display: block;
+    }
+
+    /* ---------- 主内容区通用 ---------- */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+      min-width: 0;
+    }
+
+    .section-header {
+      margin-bottom: 1.2rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: -0.3px;
+      margin-bottom: 0.25rem;
+    }
+
+    .section-header p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* 概览 */
+    .overview-text {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 72ch;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .anime-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .anime-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .anime-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: #d9e4f0;
+    }
+
+    .anime-card-body {
+      padding: 0.9rem 0.9rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      flex: 1;
+    }
+
+    .anime-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      line-height: 1.3;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .tag {
+      font-size: 0.65rem;
+      background: #edf3fa;
+      color: var(--primary);
+      padding: 0.15rem 0.55rem;
+      border-radius: var(--radius-tag);
+      font-weight: 500;
+    }
+
+    .card-desc {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: auto;
+      padding-top: 0.3rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    /* 更新列表 */
+    .update-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .update-item {
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eef2f7;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-item .date {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      min-width: 68px;
+      white-space: nowrap;
+    }
+
+    .update-item .title {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+    }
+
+    .update-item .brief {
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      margin-left: 0.3rem;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.8rem;
+    }
+
+    .category-item {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 1rem 0.8rem;
+      text-align: center;
+      transition: background 0.15s, border-color 0.15s;
+      cursor: pointer;
+      box-shadow: var(--shadow-default);
+    }
+
+    .category-item:hover {
+      background: #f3f8ff;
+      border-color: var(--primary-light);
+    }
+
+    .category-item .cat-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+    }
+
+    .category-item .cat-count {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 2rem 2rem 1.8rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+    }
+
+    .deep-dive h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .deep-dive h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.6rem 0 0.6rem;
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p, .deep-dive li {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .deep-dive ul {
+      padding-left: 1.4rem;
+      margin: 0.5rem 0;
+    }
+
+    .deep-dive li {
+      margin-bottom: 0.3rem;
+    }
+
+    .deep-dive .highlight-box {
+      background: #f4f9ff;
+      border-left: 3px solid var(--primary);
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 1rem 1.2rem;
+      box-shadow: var(--shadow-default);
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .step-content p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .faq-list details {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.8rem 1.2rem;
+      box-shadow: var(--shadow-default);
+      transition: border-color 0.15s;
+    }
+
+    .faq-list details[open] {
+      border-color: var(--primary-light);
+    }
+
+    .faq-list summary {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--primary-dark);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-left: 1rem;
+    }
+
+    .faq-list details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-list .faq-answer {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 0.6rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .comment-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 1rem;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .comment-user {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #d6e3f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .comment-name {
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--text-primary);
+    }
+
+    .comment-text {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .comment-meta {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 1rem;
+      box-shadow: var(--shadow-default);
+    }
+
+    .news-item img {
+      width: 100px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .news-body h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .news-date {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .news-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 相关推荐标签 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .rec-tag {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-tag);
+      padding: 0.4rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      transition: background 0.15s, border-color 0.15s;
+      box-shadow: var(--shadow-default);
+    }
+
+    .rec-tag:hover {
+      background: #f0f7ff;
+      border-color: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    /* 榜单 / 时间线 */
+    .timeline {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline li {
+      position: relative;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding-left: 1rem;
+    }
+
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: -1.35rem;
+      top: 0.4rem;
+      width: 8px;
+      height: 8px;
+      background: var(--primary-light);
+      border-radius: 50%;
+    }
+
+    .timeline .tl-date {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-right: 0.4rem;
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #c9d8e8;
+      padding: 2.8rem 1.5rem 1.8rem;
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-desc {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: #a8bfd4;
+      max-width: 34ch;
+    }
+
+    .footer-group h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #eef4fa;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-group ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-group a {
+      color: #a8bfd4;
+    }
+
+    .footer-group a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.72rem;
+      color: #8aa3ba;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-hover);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 80;
+      transition: background 0.15s;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+    }
+
+    .back-to-top.show {
+      display: flex;
+    }
+
+    /* 移动端遮罩 */
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 90;
+    }
+
+    .drawer-overlay.active {
+      display: block;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-wrap {
+        grid-template-columns: 1fr 260px;
+      }
+      .channel-aside {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .header-nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .main-wrap {
+        grid-template-columns: 1fr;
+      }
+      .aux-aside {
+        position: static;
+      }
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+        max-width: 100%;
+      }
+      .hero-desc {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero-visual {
+        flex: 0 1 auto;
+      }
+      .hero-svg {
+        max-width: 260px;
+      }
+      .announce-bar {
+        font-size: 0.7rem;
+        gap: 0.5rem;
+      }
+      .announce-bar .announce-item:nth-child(3) {
+        display: none;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 38px;
+        height: 38px;
+      }
+      .search-box input {
+        width: 100px;
+      }
+      .news-item {
+        flex-direction: column;
+      }
+      .news-item img {
+        width: 100%;
+        height: 120px;
+      }
+    }
+
+    /* 焦点可见 */
+    :focus-visible {
+      outline: 2px solid var(--primary-light);
+      outline-offset: 2px;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" id="announce-bar">
+    <span class="announce-item"><strong>圣华学院</strong> 第二季第8话 11月6日 已更新</span>
+    <span class="dot"></span>
+    <span class="announce-item">OVA「夏日合宿篇」 11月1日 上线</span>
+    <span class="dot"></span>
+    <span class="announce-item">全系列累计收录 47 话</span>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand" aria-label="圣华学院动漫全集在线免费观看 首页">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#2F5D8A"/>
+          <path d="M12 28L20 10L28 28H23L20 20L17 28H12Z" fill="#FFFFFF" opacity="0.95"/>
+          <circle cx="20" cy="30" r="2.5" fill="#9EC5E8"/>
+        </svg>
+        <span class="brand-text">圣华学院动漫全集在线免费观看</span>
+      </a>
+      <nav class="header-nav" aria-label="主导航">
+        <a href="/#overview">番剧概览</a>
+        <a href="/#featured">精选条目</a>
+        <a href="/#updates">更新动态</a>
+        <a href="/#categories">分类筛选</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="搜索条目…" aria-label="搜索圣华学院相关条目">
+          <button type="button" id="searchBtn">搜索</button>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 移动端遮罩 -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">校园 · 青春 · 群像</span>
+        <h1>圣华学院动漫全集在线免费观看</h1>
+        <p class="hero-desc">
+          汇聚「圣华学院」系列全两季、OVA与特别篇，按学期与剧情线整理47话条目，附分集看点、类型筛选与观众短评，适合补番与追更的校园番爱好者。
+        </p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn-primary">浏览全集条目</a>
+          <a href="/#updates" class="btn-outline">查看更新动态</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg class="hero-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="圣华学院校舍与樱花枝的插画">
+          <circle cx="150" cy="150" r="130" fill="#D9E8F5" opacity="0.5"/>
+          <rect x="80" y="120" width="140" height="100" rx="4" fill="#F0F6FC" stroke="#2F5D8A" stroke-width="2"/>
+          <polygon points="150,70 60,125 240,125" fill="#2F5D8A" opacity="0.85"/>
+          <rect x="120" y="160" width="60" height="60" fill="#B0CDE8"/>
+          <rect x="130" y="170" width="12" height="18" rx="2" fill="#2F5D8A"/>
+          <rect x="158" y="170" width="12" height="18" rx="2" fill="#2F5D8A"/>
+          <circle cx="100" cy="90" r="6" fill="#F0A8B8" opacity="0.8"/>
+          <circle cx="210" cy="80" r="5" fill="#F0A8B8" opacity="0.6"/>
+          <circle cx="230" cy="110" r="4" fill="#F0A8B8" opacity="0.5"/>
+          <path d="M40 200 Q70 180 90 210" stroke="#8FB8D9" stroke-width="2" fill="none"/>
+          <path d="M220 220 Q250 200 270 230" stroke="#8FB8D9" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区：三栏门户 -->
+  <div class="main-wrap">
+
+    <!-- 左频道索引 -->
+    <aside class="channel-aside" aria-label="频道索引">
+      <h2>频道</h2>
+      <ul class="channel-list">
+        <li><a href="/#overview" class="active">番剧概览</a></li>
+        <li><a href="/#featured">精选条目</a></li>
+        <li><a href="/#updates">更新动态</a></li>
+        <li><a href="/#categories">分类筛选</a></li>
+        <li><a href="/#deepdive">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#comments">观众评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#recommend">相关推荐</a></li>
+        <li><a href="/#timeline">播出时间线</a></li>
+        <li><a href="/#contribute">投稿互动</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中主内容 -->
+    <main class="main-content">
+
+      <!-- 1. 主题领域概览 -->
+      <section id="overview">
+        <div class="section-header">
+          <h2>校园群像番的观看方向</h2>
+          <p>从学期篇章到角色支线，梳理圣华学院系列的内容构成</p>
+        </div>
+        <p class="overview-text">
+          圣华学院系列以私立圣华学院的三个学期为叙事框架，第一季聚焦一年级新生入学后的社团选择与宿舍群像，第二季则转入学生会选举与修学旅行两条主线。作品在校园日常中穿插轻推理与情感线，第7话「文化祭前夜」用双线剪辑交替呈现舞台组与后台组的准备过程，是补番时绕不开的高口碑单集。目前可观看的条目包括TV两季共24话、OVA「夏日合宿篇」2话、特别篇「毕业前夜」1话，以及2026年10月新上线的「冬季补习篇」短篇集。角色方面，主角组六人各自有独立支线：田径部的朝比奈葵、图书委员的七海灯、转学生九条凛等，每条支线对应不同的观看顺序建议。系列构成上，第一季偏重群像介绍，第二季开始收束伏笔，OVA与特别篇则补全正片未展开的日常碎片。
+        </p>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section id="featured">
+        <div class="section-header">
+          <h2>精选条目：按篇章与角色线</h2>
+          <p>8个具体条目，覆盖正片、OVA与特别篇</p>
+        </div>
+        <div class="card-grid">
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-s1e1/400/300" alt="圣华学院第一季第1话 入学式与社团招新" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">TV第一季</span><span class="tag">第1话</span></span>
+              <h3 class="anime-card-title">入学式与社团招新</h3>
+              <p class="card-desc">朝比奈葵在田径部与美术部之间摇摆，七海灯第一次出现在图书馆天台。</p>
+              <div class="card-meta"><span>热度 9.2</span><span>24分钟</span></div>
+            </div>
+          </article>
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-s1e7/400/300" alt="圣华学院第一季第7话 文化祭前夜" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">TV第一季</span><span class="tag">第7话</span></span>
+              <h3 class="anime-card-title">文化祭前夜</h3>
+              <p class="card-desc">舞台组与后台组双线剪辑，道具丢失事件在最后五分钟反转。单集评分9.5。</p>
+              <div class="card-meta"><span>热度 9.5</span><span>24分钟</span></div>
+            </div>
+          </article>
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-s2e8/400/300" alt="圣华学院第二季第8话 学生会选举开票" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">TV第二季</span><span class="tag">第8话</span></span>
+              <h3 class="anime-card-title">学生会选举开票</h3>
+              <p class="card-desc">九条凛以三票之差落选，七海灯在结果公布后的走廊对话成为第二季转折点。</p>
+              <div class="card-meta"><span>热度 9.3</span><span>24分钟</span></div>
+            </div>
+          </article>
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-ova1/400/300" alt="圣华学院OVA夏日合宿篇 海边合宿" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">OVA</span><span class="tag">夏日合宿篇</span></span>
+              <h3 class="anime-card-title">夏日合宿篇·上</h3>
+              <p class="card-desc">轻音部与游泳部共用一栋民宿，夜间试胆大会的路线图藏在厨房冰箱背面。</p>
+              <div class="card-meta"><span>热度 8.8</span><span>28分钟</span></div>
+            </div>
+          </article>
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-sp1/400/300" alt="圣华学院特别篇 毕业前夜 三年生送别会" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">特别篇</span><span class="tag">毕业前夜</span></span>
+              <h3 class="anime-card-title">毕业前夜</h3>
+              <p class="card-desc">三年生送别会当天，图书委员会交接仪式上出现一封没有署名的信。</p>
+              <div class="card-meta"><span>热度 9.0</span><span>45分钟</span></div>
+            </div>
+          </article>
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-winter1/400/300" alt="圣华学院冬季补习篇 寒假补课第一天" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">短篇集</span><span class="tag">冬季补习篇</span></span>
+              <h3 class="anime-card-title">寒假补课第一天</h3>
+              <p class="card-desc">2026年10月新上线，六人组因成绩问题被集中补习，教室暖气故障引出新角色。</p>
+              <div class="card-meta"><span>热度 8.5</span><span>12分钟×6</span></div>
+            </div>
+          </article>
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-akari/400/300" alt="圣华学院角色支线 朝比奈葵的田径纪录" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">角色支线</span><span class="tag">朝比奈葵</span></span>
+              <h3 class="anime-card-title">朝比奈葵的田径纪录</h3>
+              <p class="card-desc">第一季第4话、第二季第5话与OVA各有一段400米训练戏，时间线横跨整个学年。</p>
+              <div class="card-meta"><span>热度 8.7</span><span>合集</span></div>
+            </div>
+          </article>
+          <article class="anime-card">
+            <img src="https://picsum.photos/seed/shenghua-rin/400/300" alt="圣华学院角色支线 九条凛转学日记" width="400" height="300" loading="lazy">
+            <div class="anime-card-body">
+              <span class="tag-row"><span class="tag">角色支线</span><span class="tag">九条凛</span></span>
+              <h3 class="anime-card-title">九条凛转学日记</h3>
+              <p class="card-desc">从第二季第1话转学至第12话离校，九条凛的独白台词分布在七集片尾小剧场。</p>
+              <div class="card-meta"><span>热度 8.9</span><span>合集</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 / 动态 -->
+      <section id="updates">
+        <div class="section-header">
+          <h2>更新动态：11月新上条目</h2>
+          <p>以2026年11月8日为基准，近期条目进度</p>
+        </div>
+        <ul class="update-list">
+          <li class="update-item"><span class="date">2026-11-06</span><span class="title">第二季第8话「学生会选举开票」</span><span class="brief">九条凛以112票对115票落选，开票室场景采用一镜到底。</span></li>
+          <li class="update-item"><span class="date">2026-11-01</span><span class="title">OVA「夏日合宿篇·下」</span><span class="brief">试胆大会路线图被证实是七海灯提前绘制，片尾彩蛋出现冬季补习篇预告。</span></li>
+          <li class="update-item"><span class="date">2026-10-25</span><span class="title">冬季补习篇·第3话「暖气坏了」</span><span class="brief">新角色出场，声优为2026年新人赏得主，台词量集中在前三分钟。</span></li>
+          <li class="update-item"><span class="date">2026-10-20</span><span class="title">第二季第7话「修学旅行·京都」</span><span class="brief">清水寺台阶上的长镜头被观众截取讨论，作画监督在社交账号发布原画稿。</span></li>
+          <li class="update-item"><span class="date">2026-10-15</span><span class="title">特别篇「毕业前夜」蓝光版</span><span class="brief">新增12分钟未播出片段，补全图书委员会交接仪式的完整对话。</span></li>
+          <li class="update-item"><span class="date">2026-10-12</span><span class="title">第一季第7话「文化祭前夜」重制版</span><span class="brief">背景音乐重新录制，道具丢失事件的伏笔镜头增加两处特写。</span></li>
+          <li class="update-item"><span class="date">2026-10-08</span><span class="title">冬季补习篇·第1话「寒假补课第一天」</span><span class="brief">短篇集上线首日播放量突破80万，片尾曲沿用第一季第二主题曲变奏。</span></li>
+          <li class="update-item"><span class="date">2026-10-01</span><span class="title">第二季第6话「图书委员会的内幕」</span><span class="brief">七海灯整理旧书架时发现第一季第1话出现的借阅卡，时间线形成闭环。</span></li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section id="categories">
+        <div class="section-header">
+          <h2>按类型与篇章筛选</h2>
+          <p>8个直接对应的分类词</p>
+        </div>
+        <div class="category-grid">
+          <div class="category-item"><div class="cat-name">TV第一季</div><div class="cat-count">12话</div></div>
+          <div class="category-item"><div class="cat-name">TV第二季</div><div class="cat-count">12话</div></div>
+          <div class="category-item"><div class="cat-name">OVA夏日合宿</div><div class="cat-count">2话</div></div>
+          <div class="category-item"><div class="cat-name">特别篇·毕业前夜</div><div class="cat-count">1话</div></div>
+          <div class="category-item"><div class="cat-name">冬季补习篇</div><div class="cat-count">6话</div></div>
+          <div class="category-item"><div class="cat-name">角色支线合集</div><div class="cat-count">5条</div></div>
+          <div class="category-item"><div class="cat-name">文化祭相关</div><div class="cat-count">3话</div></div>
+          <div class="category-item"><div class="cat-name">学生会选举线</div><div class="cat-count">4话</div></div>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析正文 -->
+      <section id="deepdive" class="deep-dive">
+        <h2>群像叙事的分寸：圣华学院如何分配角色戏份</h2>
+        <p>六人主角组在24话正片中各自拿到的独立镜头时长并不平均。朝比奈葵与七海灯合计占去约43%的个人线篇幅，九条凛虽在第二季才登场，却贡献了第二季评分最高的第8话。这种不均衡分配在校园群像番里并不少见，但圣华学院的处理方式值得拆开看。</p>
+
+        <h3>一、角色支线的触发机制</h3>
+        <p>第一季前六话采用“一话一角色”的引入模式：第2话朝比奈葵的田径部入部测试、第3话七海灯的图书委员会竞选、第4话转入文化祭筹备。这种模式的风险是单集观感参差，第4话在观众投票中仅得7.8分，低于第一季平均8.4分。制作组从第7话开始改为双线并进，文化祭前夜同时处理舞台组与后台组，单集评分回升至9.5。第二季沿用双线结构，学生会选举与修学旅行两条主线并行，第8话开票场景将两条线收束在同一间教室。</p>
+        <p>一个可核对的细节：第一季第7话的片尾字幕中，分镜栏署名两人，而前六话均为一人。双线剪辑带来的信息密度提升，与分镜人力增加直接相关。</p>
+
+        <h3>二、OVA与特别篇的补完策略</h3>
+        <p>OVA「夏日合宿篇」上下两话共56分钟，补完了TV版未展开的三组关系：轻音部与游泳部的共用民宿冲突、九条凛与朝比奈葵的夜谈、七海灯绘制路线图的动机。特别篇「毕业前夜」45分钟，则把镜头对准三年生送别会与图书委员会交接。两部分的共同点是：不推进主线，只填补正片省略的日常逻辑。</p>
+        <div class="highlight-box">
+          判断一个OVA是否值得看，可以检查两点：一是正片是否有明确省略的日常段落（如合宿、毕业），二是OVA是否引入新角色或改变现有关系。圣华学院OVA两者都占，因此对系列粉丝的信息增量高于普通总集篇。
+        </div>
+
+        <h3>三、冬季补习篇的变与不变</h3>
+        <p>2026年10月上线的冬季补习篇共6话，每话12分钟，首次采用短篇集形式。第1话「寒假补课第一天」把六人组重新放回教室，场景从校园日常转向封闭空间。第3话「暖气坏了」引入新角色，声优为2026年新人赏得主。短篇集的结构更接近四格漫画的节奏，每话围绕一个具体事件，不再承担长线伏笔。这种形式对补番用户友好，但对期待主线的观众来说，信息密度有所下降。第1话播出后，社交平台上关于“短篇集是否算正片”的讨论持续了三天，制作组未公开回应。</p>
+
+        <h3>四、观看顺序的两种争议</h3>
+        <p>按播出顺序观看（第一季→第二季→OVA→特别篇→冬季补习篇）能获得完整的时间线体验，九条凛的转学与离校有清晰的前后因果。按角色线跳看（先看朝比奈葵相关集数，再补七海灯）则容易在第二季第8话产生断裂感，因为选举结果依赖前七话的铺垫。两种顺序各有适用场景：补番用户适合播出顺序，重温型观众适合按角色线抽取。争议点在于冬季补习篇的位置——放在特别篇之后看，会打破毕业前夜的情绪收束；放在特别篇之前看，则时间线出现倒置。目前多数观众选择按上线时间观看，把冬季补习篇当作独立短篇处理。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section id="guide">
+        <div class="section-header">
+          <h2>补番路径与判断依据</h2>
+          <p>从哪一集切入，怎么比较不同篇章</p>
+        </div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>先看第一季第7话「文化祭前夜」</h3>
+              <p>单集完整，双线剪辑与反转结构能代表系列最高水准。如果这一集不对胃口，后续篇章大概率也不会喜欢。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>再决定是否补第一季前六话</h3>
+              <p>前六话是一话一角色的引入模式，节奏偏慢。第7话之后回看，能注意到不少伏笔，但单独看会觉得平淡。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>第二季按顺序看，不要跳集</h3>
+              <p>学生会选举线的票数、修学旅行线的地点信息分散在多集台词里。跳集会丢失第8话开票场景的逻辑支撑。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>OVA与特别篇放在正片之后</h3>
+              <p>两部分的日常补完依赖正片建立的角色关系。先看OVA再补正片，合宿夜谈的情感力度会打折扣。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h3>冬季补习篇作为独立短篇</h3>
+              <p>每话12分钟，事件独立。适合碎片时间观看，不需要连续追。第3话引入的新角色暂未出现在正片时间线中。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section id="faq">
+        <div class="section-header">
+          <h2>常见问答</h2>
+          <p>围绕条目、顺序与版本的具体问题</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>圣华学院系列目前一共有多少话？</summary>
+            <div class="faq-answer">TV第一季12话、第二季12话、OVA夏日合宿篇2话、特别篇毕业前夜1话、冬季补习篇6话（每话12分钟），合计33个可观看条目，总时长约14小时。冬季补习篇于2026年10月上线，目前更新至第3话。</div>
+          </details>
+          <details>
+            <summary>第二季第8话的选举票数具体是多少？</summary>
+            <div class="faq-answer">九条凛112票，七海灯115票，有效票数227票，废票3票。开票场景中黑板上的数字停留了约8秒，动画播出后观众逐帧核对过。</div>
+          </details>
+          <details>
+            <summary>OVA夏日合宿篇和TV版时间线怎么衔接？</summary>
+            <div class="faq-answer">OVA的时间点设定在第一季文化祭之后、第二季开学之前，即暑假期间。正片第一季第12话结尾提到合宿计划，OVA第1话开场直接是民宿玄关，中间省略了出发过程。先看第一季第12话再看OVA，衔接最顺。</div>
+          </details>
+          <details>
+            <summary>冬季补习篇的新角色是谁？</summary>
+            <div class="faq-answer">新角色名为“一之濑枫”，设定为二年级转学生，因学分不足与主角组一起参加寒假补习。第3话「暖气坏了」中首次登场，台词集中在教室场景。声优为2026年新人赏得主，制作组尚未公布该角色是否出现在正片时间线中。</div>
+          </details>
+          <details>
+            <summary>特别篇毕业前夜和TV第二季结局有冲突吗？</summary>
+            <div class="faq-answer">没有冲突。特别篇发生在第二季最终话之后，时间线为三年生毕业典礼前夜。第二季第12话结尾的走廊镜头中，七海灯手里拿的信封就是特别篇里那封没有署名的信。两处细节可以对照观看。</div>
+          </details>
+          <details>
+            <summary>文化祭相关集数除了第一季第7话还有哪些？</summary>
+            <div class="faq-answer">第一季第6话（文化祭筹备开始）、第7话（前夜）、第8话（文化祭当天），以及第二季第3话（文化祭回顾，以回忆片段形式出现）。其中第7话是双线剪辑最完整的一集，第8话侧重舞台演出，第6话主要铺垫道具丢失事件。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section id="comments">
+        <div class="section-header">
+          <h2>观众短评</h2>
+          <p>15条围绕具体条目与类型的评价</p>
+        </div>
+        <div class="comment-grid">
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">竹</div><span class="comment-name">竹内凉子</span></div>
+            <p class="comment-text">第7话文化祭前夜那个道具丢失的反转，我暂停回看了三次。后台组拿错箱子的镜头在第6话就有伏笔，当时完全没注意。</p>
+            <div class="comment-meta">2026-11-07</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">K</div><span class="comment-name">Kaito_88</span></div>
+            <p class="comment-text">第二季选举线写得太密了，第8话开票之前我都在记人名。不过走廊对话那段确实好，九条凛输了三票反而比赢了更有记忆点。</p>
+            <div class="comment-meta">2026-11-06</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">冬</div><span class="comment-name">冬木落</span></div>
+            <p class="comment-text">冬季补习篇第三话新角色出场那几分钟，台词节奏跟正片完全不一样，感觉像换了编剧。查了下片尾，系列构成还是原班，可能是短篇集故意的。</p>
+            <div class="comment-meta">2026-11-05</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">七</div><span class="comment-name">七海灯大图书馆</span></div>
+            <p class="comment-text">OVA上篇试胆大会的路线图，冰箱背面贴的那张手绘地图，跟第一季第3话七海灯在图书馆画的那张构图一样。细节控狂喜。</p>
+            <div class="comment-meta">2026-11-04</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">朝</div><span class="comment-name">朝比奈葵冲鸭</span></div>
+            <p class="comment-text">田径部训练戏的作画比比赛本身好看。第二季第5话那个400米起跑镜头，背景里的云是动的，作画监督推特发了原画。</p>
+            <div class="comment-meta">2026-11-03</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">路</div><span class="comment-name">路人A_2026</span></div>
+            <p class="comment-text">特别篇毕业前夜45分钟太短了，图书委员会交接那段对话感觉砍了不少。蓝光版多12分钟，等有资源了再补一遍。</p>
+            <div class="comment-meta">2026-11-02</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">柚</div><span class="comment-name">柚子茶不加冰</span></div>
+            <p class="comment-text">说实话第一季前六话我快进了三集，一话一个角色真的有点散。忍到第7话才觉得对味。如果时间紧，直接从第7话开始看完全没问题。</p>
+            <div class="comment-meta">2026-11-01</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">九</div><span class="comment-name">九条凛的围巾</span></div>
+            <p class="comment-text">第二季第1话转学出场那个镜头，校服外套搭在手臂上，围巾颜色跟第一季第10话朝比奈葵丢的那条一模一样。制作组埋线狂魔。</p>
+            <div class="comment-meta">2026-10-30</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">补</div><span class="comment-name">补番拖延症</span></div>
+            <p class="comment-text">短篇集六话我三天看完，每话12分钟确实轻松。但要说信息量，还是正片扎实。短篇集更适合下饭，不适合当主线看。</p>
+            <div class="comment-meta">2026-10-28</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">书</div><span class="comment-name">书架上的猫</span></div>
+            <p class="comment-text">第二季第6话七海灯翻旧书架发现第一季借阅卡那段，时间线闭环设计得真不错。不过那个借阅卡上的日期写的是第一季第1话当天，也就是说七海灯从入学第一天就注意到了朝比奈葵？细思恐极。</p>
+            <div class="comment-meta">2026-10-26</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">暖</div><span class="comment-name">暖气片不热</span></div>
+            <p class="comment-text">冬季补习篇第3话标题就叫暖气坏了，我正好那天家里暖气也坏了，看的时候笑出声。新角色一之濑枫目前戏份太少，看不出性格。</p>
+            <div class="comment-meta">2026-10-24</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">Q</div><span class="comment-name">Qoo_游荡中</span></div>
+            <p class="comment-text">这片子OST比正片还耐听，第一季第二主题曲变奏用在冬季补习片尾，前奏一响就知道是圣华学院。音乐担当没换人，稳。</p>
+            <div class="comment-meta">2026-10-22</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">大</div><span class="comment-name">大江户小铁</span></div>
+            <p class="comment-text">修学旅行那两集作画明显比前面好，清水寺台阶长镜头应该是这季度最烧钱的一段。希望下一季保持这个水准。</p>
+            <div class="comment-meta">2026-10-20</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">不</div><span class="comment-name">不吃香菜</span></div>
+            <p class="comment-text">评论里都在聊剧情，我来说个跑题的——这片子的校服设计真的好看，深蓝外套配灰领带，比很多校园番的校服耐看。周边要出校服款我肯定买。</p>
+            <div class="comment-meta">2026-10-18</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-user"><div class="avatar">夜</div><span class="comment-name">夜行性动物</span></div>
+            <p class="comment-text">第二季第8话开票室一镜到底那段，黑板上的票数数字停留了八秒，够我看清每一笔。这种不炫技的长镜头比旋转镜头舒服多了。</p>
+            <div class="comment-meta">2026-10-16</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section id="news">
+        <div class="section-header">
+          <h2>相关资讯</h2>
+          <p>2026年10月至11月的具体动态</p>
+        </div>
+        <div class="news-list">
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/news-winter-ova/600/400" alt="冬季补习篇上线宣传图" width="600" height="400" loading="lazy">
+            <div class="news-body">
+              <h3>冬季补习篇第3话上线，新角色声优公布</h3>
+              <div class="news-date">2026-10-25</div>
+              <p class="news-desc">一之濑枫的声优确定为2026年新人赏得主，制作组在片尾字幕中首次公开角色全名。该角色暂未出现在正片时间线中。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/news-bluray/600/400" alt="毕业前夜蓝光版封面" width="600" height="400" loading="lazy">
+            <div class="news-body">
+              <h3>特别篇毕业前夜蓝光版新增12分钟片段</h3>
+              <div class="news-date">2026-10-15</div>
+              <p class="news-desc">新增内容为图书委员会交接仪式的完整对话，补全了TV版中省略的七海灯与三年生交接细节。蓝光版于10月15日发货。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/news-ratings/600/400" alt="第二季第八话评分截图" width="600" height="400" loading="lazy">
+            <div class="news-body">
+              <h3>第二季第8话单集评分9.5，创系列新高</h3>
+              <div class="news-date">2026-11-06</div>
+              <p class="news-desc">开票场景的一镜到底与走廊对话被观众反复截取讨论，评分网站显示该集有效评分样本超过1.2万份，超过第一季第7话的9.5分（样本9000份）。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/news-kyoto/600/400" alt="修学旅行京都篇作画监督原画" width="600" height="400" loading="lazy">
+            <div class="news-body">
+              <h3>修学旅行作画监督发布清水寺台阶原画稿</h3>
+              <div class="news-date">2026-10-20</div>
+              <p class="news-desc">原画稿显示台阶长镜头共136张，比第一季文化祭舞台镜头多出41张。作画监督在社交账号表示该段耗时三周完成。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/news-ost/600/400" alt="圣华学院OST专辑封面" width="600" height="400" loading="lazy">
+            <div class="news-body">
+              <h3>系列OST合集11月3日上架流媒体</h3>
+              <div class="news-date">2026-10-12</div>
+              <p class="news-desc">合集收录两季TV、OVA与特别篇全部配乐共48轨，冬季补习篇片尾曲变奏为首次收录。实体CD同步发售。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/news-s1e7/600/400" alt="第一季第七话重制版对比图" width="600" height="400" loading="lazy">
+            <div class="news-body">
+              <h3>第一季第7话重制版上线，背景音乐重新录制</h3>
+              <div class="news-date">2026-10-12</div>
+              <p class="news-desc">重制版增加两处道具丢失事件的伏笔特写，背景音乐由原班乐团重新录制。观众对比后发现舞台组上台前的走廊镜头延长了4秒。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section id="recommend">
+        <div class="section-header">
+          <h2>相关推荐</h2>
+          <p>具体条目名与内容方向，按需索引</p>
+        </div>
+        <div class="rec-tags">
+          <a href="/#featured" class="rec-tag">文化祭前夜 第7话</a>
+          <a href="/#featured" class="rec-tag">学生会选举开票 第8话</a>
+          <a href="/#featured" class="rec-tag">夏日合宿篇 试胆大会</a>
+          <a href="/#featured" class="rec-tag">朝比奈葵 400米训练戏</a>
+          <a href="/#featured" class="rec-tag">九条凛 转学日记</a>
+          <a href="/#featured" class="rec-tag">七海灯 借阅卡伏笔</a>
+          <a href="/#featured" class="rec-tag">毕业前夜 图书委员会交接</a>
+          <a href="/#featured" class="rec-tag">冬季补习篇 一之濑枫</a>
+        </div>
+      </section>
+
+      <!-- 11. 补充板块：播出时间线 + 榜单 -->
+      <section id="timeline">
+        <div class="section-header">
+          <h2>播出时间线</h2>
+          <p>按上线顺序排列的可核对节点</p>
+        </div>
+        <ul class="timeline">
+          <li><span class="tl-date">2026-10-01</span>第二季第6话「图书委员会的内幕」上线，借阅卡伏笔回收</li>
+          <li><span class="tl-date">2026-10-08</span>冬季补习篇第1话「寒假补课第一天」上线，短篇集形式首次启用</li>
+          <li><span class="tl-date">2026-10-12</span>第一季第7话重制版上线，背景音乐重新录制</li>
+          <li><span class="tl-date">2026-10-15</span>特别篇毕业前夜蓝光版发货，新增12分钟片段</li>
+          <li><span class="tl-date">2026-10-20</span>第二季第7话「修学旅行·京都」上线，台阶长镜头136张原画</li>
+          <li><span class="tl-date">2026-10-25</span>冬季补习篇第3话「暖气坏了」上线，新角色一之濑枫登场</li>
+          <li><span class="tl-date">2026-11-01</span>OVA夏日合宿篇·下上线，片尾彩蛋预告冬季补习篇</li>
+          <li><span class="tl-date">2026-11-06</span>第二季第8话「学生会选举开票」上线，单集评分9.5</li>
+        </ul>
+      </section>
+
+      <!-- 投稿互动 -->
+      <section id="contribute">
+        <div class="section-header">
+          <h2>投稿与交流</h2>
+          <p>分享你的分集笔记或角色分析</p>
+        </div>
+        <div style="background:var(--panel); border:1px solid var(--border); border-radius:var(--radius-card); padding:1.5rem; box-shadow:var(--shadow-default);">
+          <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.8rem;">如果你对第二季第8话的选举票数有不同解读，或者发现了新的伏笔细节，可以整理成条目笔记投稿。站内会挑选具体、可核对的投稿展示在「观众评论」与「相关资讯」板块。</p>
+          <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+            <a href="/#contribute" class="btn-primary" style="font-size:0.85rem; padding:0.5rem 1.4rem;">提交条目笔记</a>
+            <a href="/#comments" class="btn-outline" style="font-size:0.85rem; padding:0.5rem 1.4rem;">查看已有评论</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="aux-aside" aria-label="辅助信息">
+      <div class="aux-card">
+        <h3>条目热榜</h3>
+        <ul class="hot-list">
+          <li><span class="rank">1</span><a href="/#featured">文化祭前夜 第7话</a></li>
+          <li><span class="rank">2</span><a href="/#featured">学生会选举开票 第8话</a></li>
+          <li><span class="rank">3</span><a href="/#featured">毕业前夜 特别篇</a></li>
+          <li><span class="rank">4</span><a href="/#featured">夏日合宿篇·上</a></li>
+          <li><span class="rank">5</span><a href="/#featured">九条凛转学日记</a></li>
+        </ul>
+      </div>
+      <div class="aux-card">
+        <h3>最近更新</h3>
+        <ul class="update-stream">
+          <li><span class="update-date">2026-11-06</span>第二季第8话 开票</li>
+          <li><span class="update-date">2026-11-01</span>OVA夏日合宿篇·下</li>
+          <li><span class="update-date">2026-10-25</span>冬季补习篇 第3话</li>
+          <li><span class="update-date">2026-10-20</span>第二季第7话 京都</li>
+          <li><span class="update-date">2026-10-15</span>毕业前夜 蓝光版</li>
+        </ul>
+      </div>
+      <div class="aux-card">
+        <h3>快速入口</h3>
+        <ul class="hot-list">
+          <li><a href="/#categories">按类型筛选</a></li>
+          <li><a href="/#guide">补番顺序</a></li>
+          <li><a href="/#faq">选举票数问答</a></li>
+          <li><a href="/#contribute">投稿笔记</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">圣华学院动漫全集在线免费观看</div>
+        <p class="footer-desc">收录圣华学院系列自2026年10月至11月8日已上线的33个条目，涵盖TV两季、OVA、特别篇与冬季补习短篇集。更新节奏跟随动画上线时间，条目笔记与评论每日整理。</p>
+      </div>
+      <div class="footer-group">
+        <h4>条目索引</h4>
+        <ul>
+          <li><a href="/#featured">TV第一季</a></li>
+          <li><a href="/#featured">TV第二季</a></li>
+          <li><a href="/#featured">OVA夏日合宿</a></li>
+          <li><a href="/#featured">特别篇毕业前夜</a></li>
+          <li><a href="/#featured">冬季补习篇</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h4>内容方向</h4>
+        <ul>
+          <li><a href="/#deepdive">群像叙事分析</a></li>
+          <li><a href="/#guide">补番路径</a></li>
+          <li><a href="/#faq">票数细节</a></li>
+          <li><a href="/#timeline">播出时间线</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h4>互动</h4>
+        <ul>
+          <li><a href="/#contribute">条目笔记投稿</a></li>
+          <li><a href="/#comments">观众短评</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 圣华学院动漫条目索引 · 内容为示例条目，用于展示</span>
+      <span>最后更新：2026-11-08 · 对应第二季第8话与OVA下篇上线</span>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 回到顶部
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      }, { passive: true });
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 搜索过滤
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const cards = document.querySelectorAll('.anime-card');
+      const updateItems = document.querySelectorAll('.update-item');
+      const newsItems = document.querySelectorAll('.news-item');
+      const categoryItems = document.querySelectorAll('.category-item');
+      const recTags = document.querySelectorAll('.rec-tag');
+
+      function performSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (!query) {
+          // 重置
+          cards.forEach(c => c.style.display = '');
+          updateItems.forEach(u => u.style.display = '');
+          newsItems.forEach(n => n.style.display = '');
+          categoryItems.forEach(c => c.style.display = '');
+          recTags.forEach(r => r.style.display = '');
+          return;
+        }
+        // 卡片
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(query) ? '' : 'none';
+        });
+        // 更新条目
+        updateItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? '' : 'none';
+        });
+        // 资讯
+        newsItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? '' : 'none';
+        });
+        // 分类
+        categoryItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? '' : 'none';
+        });
+        // 推荐标签
+        recTags.forEach(tag => {
+          const text = tag.textContent.toLowerCase();
+          tag.style.display = text.includes(query) ? '' : 'none';
+        });
+      }
+
+      searchBtn.addEventListener('click', performSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          performSearch();
+        }
+      });
+
+      // 汉堡菜单（移动端简单提示，因导航已在header中，此处仅做遮罩切换）
+      const hamburger = document.getElementById('hamburgerBtn');
+      const overlay = document.getElementById('drawerOverlay');
+      let menuOpen = false;
+
+      function closeMenu() {
+        menuOpen = false;
+        overlay.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+
+      hamburger.addEventListener('click', function() {
+        menuOpen = !menuOpen;
+        overlay.classList.toggle('active', menuOpen);
+        hamburger.setAttribute('aria-expanded', menuOpen ? 'true' : 'false');
+      });
+
+      overlay.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && menuOpen) {
+          closeMenu();
+        }
+      });
+
+      // 点击导航后关闭菜单（如果有展开）
+      document.querySelectorAll('.header-nav a, .channel-list a').forEach(link => {
+        link.addEventListener('click', function() {
+          if (menuOpen) closeMenu();
+        });
+      });
+
+      // 侧栏导航高亮（简单滚动监听）
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.channel-list a');
+
+      function highlightNav() {
+        const scrollPos = window.scrollY + 120;
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+          const id = section.getAttribute('id');
+          const link = document.querySelector(`.channel-list a[href="/#${id}"]`);
+          if (link) {
+            if (scrollPos >= top && scrollPos < bottom) {
+              navLinks.forEach(l => l.classList.remove('active'));
+              link.classList.add('active');
+            }
+          }
+        });
+      }
+
+      window.addEventListener('scroll', highlightNav, { passive: true });
+      window.addEventListener('load', highlightNav);
+    })();
+  </script>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "圣华学院动漫全集在线免费观看",
+    "description": "圣华学院动漫全集在线免费观看：收录圣华学院系列全季条目、OVA与特别篇，提供分集速览、类型筛选、观众评论与更新动态，适合追校园番的学生党与补番用户。",
+    "url": "/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "圣华学院系列目前一共有多少话？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TV第一季12话、第二季12话、OVA夏日合宿篇2话、特别篇毕业前夜1话、冬季补习篇6话（每话12分钟），合计33个可观看条目，总时长约14小时。冬季补习篇于2026年10月上线，目前更新至第3话。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "第二季第8话的选举票数具体是多少？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "九条凛112票，七海灯115票，有效票数227票，废票3票。开票场景中黑板上的数字停留了约8秒，动画播出后观众逐帧核对过。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "OVA夏日合宿篇和TV版时间线怎么衔接？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OVA的时间点设定在第一季文化祭之后、第二季开学之前，即暑假期间。正片第一季第12话结尾提到合宿计划，OVA第1话开场直接是民宿玄关，中间省略了出发过程。先看第一季第12话再看OVA，衔接最顺。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "冬季补习篇的新角色是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "新角色名为“一之濑枫”，设定为二年级转学生，因学分不足与主角组一起参加寒假补习。第3话「暖气坏了」中首次登场，台词集中在教室场景。声优为2026年新人赏得主，制作组尚未公布该角色是否出现在正片时间线中。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "特别篇毕业前夜和TV第二季结局有冲突吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "没有冲突。特别篇发生在第二季最终话之后，时间线为三年生毕业典礼前夜。第二季第12话结尾的走廊镜头中，七海灯手里拿的信封就是特别篇里那封没有署名的信。两处细节可以对照观看。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "文化祭相关集数除了第一季第7话还有哪些？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "第一季第6话（文化祭筹备开始）、第7话（前夜）、第8话（文化祭当天），以及第二季第3话（文化祭回顾，以回忆片段形式出现）。其中第7话是双线剪辑最完整的一集，第8话侧重舞台演出，第6话主要铺垫道具丢失事件。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+            </html>
