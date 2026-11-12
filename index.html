@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>尤果网模特写真 - 写真作品与模特图集聚合</title>
+<meta name="description" content="尤果网模特写真聚合写真作品、模特图集与圈内动态。涵盖甜系外拍、质感棚拍、主题套图、模特访谈与拍摄花絮，适合写真爱好者浏览与对比参考。">
+<meta name="keywords" content="尤果网模特写真">
+<style>
+:root{
+  --brand:#b5432a;
+  --brand-light:#d86a4f;
+  --brand-dark:#7d2a17;
+  --ink:#231c18;
+  --ink-2:#5c4f47;
+  --ink-3:#8d7f75;
+  --bg:#f6f1ec;
+  --panel:#fffdfb;
+  --line:#e4d8ce;
+  --radius-card:14px;
+  --radius-btn:999px;
+  --radius-tag:6px;
+  --shadow:0 1px 2px rgba(58,38,26,.06),0 6px 18px rgba(58,38,26,.06);
+  --shadow-hover:0 2px 4px rgba(58,38,26,.08),0 14px 30px rgba(58,38,26,.13);
+  --maxw:1360px;
+  --sticky-h:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-h) + 12px)}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  font-size:15.5px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:20px}
+button{font:inherit;cursor:pointer}
+
+/* ---------- 吸顶区 ---------- */
+.sticky-shell{position:sticky;top:0;z-index:60}
+.announce{
+  background:linear-gradient(90deg,var(--brand-dark),var(--brand) 55%,#c95a3d);
+  color:#fff;
+  font-size:13px;
+  letter-spacing:.2px;
+}
+.announce-inner{
+  max-width:var(--maxw);margin:0 auto;padding:7px 24px;
+  display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;
+}
+.announce b{font-weight:700;background:rgba(255,255,255,.16);padding:1px 8px;border-radius:4px;font-size:12px}
+.announce span{white-space:nowrap;opacity:.95}
+.site-header{
+  background:rgba(255,253,251,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;gap:26px;
+}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand svg{width:38px;height:38px;flex-shrink:0}
+.brand-text{font-size:19px;font-weight:800;letter-spacing:.5px;color:var(--brand-dark);white-space:nowrap}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.main-nav a{
+  padding:6px 12px;border-radius:var(--radius-btn);font-size:14px;color:var(--ink-2);
+  transition:background .18s,color .18s;
+}
+.main-nav a:hover,.main-nav a:focus-visible{background:#f2e4da;color:var(--brand-dark)}
+.main-nav a.active{background:var(--brand);color:#fff}
+.header-actions{display:flex;align-items:center;gap:10px}
+.search-box{position:relative}
+.search-box input{
+  width:190px;padding:8px 34px 8px 14px;border-radius:var(--radius-btn);
+  border:1px solid var(--line);background:#fff;font-size:13.5px;color:var(--ink);
+  outline:none;transition:border-color .18s,box-shadow .18s;
+}
+.search-box input:focus{border-color:var(--brand-light);box-shadow:0 0 0 3px rgba(181,67,42,.13)}
+.search-box button{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  border:0;background:var(--brand);color:#fff;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;font-size:13px;
+}
+.hamburger{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:10px;
+  width:42px;height:40px;place-items:center;
+}
+.hamburger span{display:block;width:18px;height:2px;background:var(--ink);margin:3px 0;transition:.2s}
+.search-feedback{
+  position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border:1px solid var(--line);
+  border-radius:10px;box-shadow:var(--shadow-hover);font-size:13px;padding:8px 12px;display:none;
+  color:var(--ink-2);z-index:70;
+}
+.search-feedback.show{display:block}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 82% -12%,rgba(216,106,79,.30),transparent 62%),
+    radial-gradient(600px 300px at 6% 108%,rgba(181,67,42,.18),transparent 60%),
+    linear-gradient(160deg,#fffdfb,#f5e8df 70%,#efdccf);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:52px 24px 58px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.4px;
+  color:var(--brand-dark);background:rgba(181,67,42,.10);border:1px solid rgba(181,67,42,.22);
+  padding:4px 12px;border-radius:var(--radius-btn);margin-bottom:16px;
+}
+.hero h1{font-size:clamp(30px,4.2vw,46px);letter-spacing:1px;color:var(--brand-dark);margin-bottom:16px}
+.hero-lead{font-size:16px;color:var(--ink-2);max-width:560px;margin-bottom:22px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:var(--radius-btn);
+  font-size:14.5px;font-weight:600;border:1px solid transparent;transition:.2s;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.btn-ghost{background:#fff;color:var(--brand-dark);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--brand-light);transform:translateY(-2px)}
+.hero-facts{display:flex;flex-wrap:wrap;gap:26px}
+.hero-facts div{font-size:13px;color:var(--ink-3)}
+.hero-facts strong{display:block;font-size:21px;color:var(--brand-dark);font-weight:800;line-height:1.3}
+.hero-visual{position:relative;min-height:330px}
+.hero-visual svg{width:100%;height:auto;filter:drop-shadow(0 18px 30px rgba(125,42,23,.18))}
+.float-card{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:10px 14px;font-size:12.5px;color:var(--ink-2);
+  animation:floaty 6s ease-in-out infinite;
+}
+.float-card b{display:block;color:var(--brand-dark);font-size:13.5px;margin-bottom:2px}
+.fc-1{top:6%;left:2%}
+.fc-2{bottom:12%;right:0;animation-delay:-2.4s}
+.fc-3{bottom:2%;left:14%;animation-delay:-4s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* ---------- 布局 ---------- */
+.layout-wrap{max-width:var(--maxw);margin:0 auto;padding:34px 24px 0}
+.layout{
+  display:grid;
+  grid-template-columns:176px minmax(0,1fr) 252px;
+  gap:28px;
+  align-items:start;
+}
+.channel-col{position:sticky;top:calc(var(--sticky-h) + 14px)}
+.channel-box{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:14px 12px;box-shadow:var(--shadow);
+}
+.channel-box h2{font-size:13px;letter-spacing:1px;color:var(--ink-3);margin:0 0 10px;padding-left:6px;font-weight:600}
+.channel-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.channel-list a{
+  display:block;padding:7px 10px;border-radius:8px;font-size:13.5px;color:var(--ink-2);
+  border-left:3px solid transparent;transition:.16s;
+}
+.channel-list a:hover{background:#f7ece4;color:var(--brand-dark)}
+.channel-list a.active{background:#f7ece4;color:var(--brand-dark);border-left-color:var(--brand);font-weight:600}
+.channel-note{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:12px;color:var(--ink-3);line-height:1.65}
+
+.main-col{min-width:0}
+.aside-col{position:sticky;top:calc(var(--sticky-h) + 14px);display:flex;flex-direction:column;gap:20px}
+
+/* ---------- 通用板块 ---------- */
+.section{margin-bottom:42px;scroll-margin-top:calc(var(--sticky-h) + 14px)}
+.section-head{margin-bottom:18px}
+.section-head h2{font-size:21px;letter-spacing:.4px;color:var(--ink)}
+.section-head h2 .num{
+  display:inline-block;font-size:12px;color:var(--brand);background:rgba(181,67,42,.10);
+  border-radius:5px;padding:1px 7px;margin-right:9px;vertical-align:2px;letter-spacing:1px;font-weight:700;
+}
+.section-head p{margin:6px 0 0;font-size:13.5px;color:var(--ink-3)}
+
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:#d9c6b8}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:24px 26px;box-shadow:var(--shadow);
+}
+.overview p{font-size:15px;color:var(--ink-2)}
+.overview p:last-child{margin-bottom:0}
+.overview strong{color:var(--brand-dark)}
+
+/* 精选卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:18px}
+.card-grid .card{overflow:hidden;display:flex;flex-direction:column}
+.card-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#eee3da}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.card:hover .card-thumb img{transform:scale(1.045)}
+.card-type{
+  position:absolute;top:10px;left:10px;background:rgba(35,28,24,.78);color:#fff;
+  font-size:11.5px;padding:2px 9px;border-radius:var(--radius-tag);letter-spacing:.5px;
+  backdrop-filter:blur(2px);
+}
+.card-body{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:15.5px;margin-bottom:7px;color:var(--ink)}
+.card-body .desc{font-size:13px;color:var(--ink-2);flex:1;margin-bottom:10px}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tag{
+  font-size:11.5px;color:var(--brand-dark);background:#f7ece4;border-radius:var(--radius-tag);
+  padding:1px 8px;line-height:1.8;
+}
+.meta-row{
+  display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--ink-3);
+  border-top:1px dashed var(--line);padding-top:9px;
+}
+.hot{color:var(--brand);font-weight:700}
+
+/* 更新列表 */
+.update-list{display:flex;flex-direction:column;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow)}
+.update-item{
+  display:grid;grid-template-columns:88px 1fr auto;gap:14px;align-items:baseline;
+  padding:13px 18px;border-bottom:1px solid var(--line);transition:background .16s;
+}
+.update-item:last-child{border-bottom:0}
+.update-item:hover{background:#fdf7f2}
+.update-date{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.update-item h3{font-size:14.5px;margin-bottom:2px}
+.update-item p{font-size:13px;color:var(--ink-2);margin:0}
+.update-badge{font-size:11.5px;color:var(--brand);background:#f7ece4;border-radius:var(--radius-tag);padding:1px 8px;white-space:nowrap}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:13px}
+.cat-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px;
+  transition:.18s;box-shadow:var(--shadow);
+}
+.cat-item:hover{border-color:var(--brand-light);transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.cat-item h3{font-size:14.5px;margin-bottom:4px;color:var(--brand-dark)}
+.cat-item p{font-size:12.5px;color:var(--ink-3);margin:0;line-height:1.6}
+
+/* 深度解析 */
+.deep-read{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:28px 30px;box-shadow:var(--shadow);
+  max-width:820px;
+}
+.deep-read h3{font-size:17.5px;margin:24px 0 10px;color:var(--brand-dark);letter-spacing:.3px}
+.deep-read h3:first-child{margin-top:0}
+.deep-read p{font-size:14.8px;color:var(--ink-2)}
+.deep-read ul li{margin-bottom:7px;font-size:14.5px;color:var(--ink-2)}
+.deep-read blockquote{
+  margin:16px 0;padding:12px 18px;border-left:3px solid var(--brand-light);
+  background:#fdf6f1;border-radius:0 8px 8px 0;font-size:14.2px;color:var(--ink-2);
+}
+.compare-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:8px 11px;text-align:left}
+.compare-table th{background:#faf0e9;color:var(--brand-dark);font-weight:600}
+.compare-table td{color:var(--ink-2)}
+
+/* 指南步骤 */
+.guide-steps{display:flex;flex-direction:column;gap:14px}
+.step{
+  display:grid;grid-template-columns:44px 1fr;gap:15px;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+  box-shadow:var(--shadow);
+}
+.step-num{
+  width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:15px;
+}
+.step h3{font-size:15px;margin-bottom:5px}
+.step p{font-size:13.5px;color:var(--ink-2);margin:0}
+
+/* FAQ */
+.faq-wrap{display:flex;flex-direction:column;gap:11px}
+details.faq{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;box-shadow:var(--shadow);transition:border-color .18s;
+}
+details.faq[open]{border-color:var(--brand-light)}
+details.faq summary{
+  cursor:pointer;font-weight:600;font-size:14.5px;color:var(--ink);list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:flex-start;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"＋";color:var(--brand);font-weight:700;flex-shrink:0}
+details.faq[open] summary::after{content:"－"}
+details.faq .faq-body{padding-top:10px;font-size:13.8px;color:var(--ink-2);border-top:1px dashed var(--line);margin-top:10px}
+
+/* 评论 */
+.comment-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:13px}
+.comment{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+  box-shadow:var(--shadow);
+}
+.comment-head{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--brand-light),var(--brand-dark));
+  color:#fff;display:grid;place-items:center;font-size:12.5px;font-weight:700;flex-shrink:0;
+}
+.comment-name{font-size:13px;font-weight:600;color:var(--ink)}
+.comment-time{font-size:11.5px;color:var(--ink-3);margin-left:auto}
+.comment p{font-size:13.4px;color:var(--ink-2);margin:0}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:12px}
+.news-item{
+  display:grid;grid-template-columns:1fr 96px;gap:16px;align-items:start;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+  box-shadow:var(--shadow);
+}
+.news-item h3{font-size:15px;margin-bottom:6px}
+.news-item p{font-size:13.2px;color:var(--ink-2);margin:0}
+.news-date{font-size:12px;color:var(--ink-3);text-align:right;font-variant-numeric:tabular-nums}
+
+/* 标签索引 */
+.tag-index{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:20px 22px;box-shadow:var(--shadow);
+  display:flex;flex-wrap:wrap;gap:9px;
+}
+.tag-index a{
+  font-size:13.2px;color:var(--brand-dark);background:#f7ece4;border-radius:var(--radius-btn);
+  padding:4px 14px;transition:.16s;border:1px solid transparent;
+}
+.tag-index a:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+.tag-index a.small{font-size:12.2px;opacity:.9}
+
+/* 榜单 */
+.rank-list{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow)}
+.rank-item{
+  display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;
+  padding:12px 18px;border-bottom:1px solid var(--line);font-size:14px;
+}
+.rank-item:last-child{border-bottom:0}
+.rank-item:hover{background:#fdf7f2}
+.rank-no{font-weight:800;color:var(--ink-3);font-size:13px}
+.rank-item:nth-child(-n+3) .rank-no{color:var(--brand)}
+.rank-name{color:var(--ink)}
+.rank-score{font-size:12px;color:var(--ink-3)}
+
+/* 侧栏组件 */
+.aside-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:16px 16px 18px;box-shadow:var(--shadow);
+}
+.aside-card h2{font-size:14px;margin-bottom:12px;color:var(--ink);letter-spacing:.5px}
+.aside-card h2 .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--brand);margin-right:7px;vertical-align:2px}
+.hot-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.hot-list li{display:grid;grid-template-columns:18px 1fr;gap:8px;font-size:13px;color:var(--ink-2);align-items:baseline}
+.hot-list li b{color:var(--brand);font-weight:700;font-size:12.5px}
+.mini-update{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.mini-update li{font-size:12.8px;color:var(--ink-2);border-left:2px solid #f0dfd3;padding-left:10px}
+.mini-update li span{display:block;font-size:11.5px;color:var(--ink-3)}
+
+/* 投稿互动区 */
+.contribute{
+  background:linear-gradient(135deg,#fff9f4,#f7e8dd);
+  border:1px solid var(--line);border-radius:var(--radius-card);padding:22px 24px;
+  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;
+  box-shadow:var(--shadow);
+}
+.contribute h2{font-size:18px;margin-bottom:6px;color:var(--brand-dark)}
+.contribute p{font-size:13.5px;color:var(--ink-2);margin:0}
+.contribute .btn-primary{white-space:nowrap}
+
+/* 页尾 */
+.site-footer{
+  margin-top:52px;background:#2a211c;color:#d9ccc3;font-size:13.5px;
+  border-top:4px solid var(--brand);
+}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:40px 24px 26px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:30px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand svg{width:32px;height:32px}
+.footer-brand span{font-size:17px;font-weight:800;color:#fff;letter-spacing:.5px}
+.footer-desc{font-size:13px;color:#b9a99e;line-height:1.8;max-width:340px}
+.footer-col h3{font-size:13.5px;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.footer-col a{color:#b9a99e;font-size:13px;transition:.16s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{
+  border-top:1px solid #463a33;padding-top:18px;display:flex;flex-wrap:wrap;
+  justify-content:space-between;gap:10px;font-size:12.5px;color:#8d7f75;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:0;display:none;place-items:center;
+  box-shadow:0 6px 18px rgba(125,42,23,.34);z-index:80;transition:background .2s;
+}
+.to-top.show{display:grid}
+.to-top:hover{background:var(--brand-dark)}
+.to-top svg{width:18px;height:18px}
+
+/* 遮罩 */
+.overlay{
+  position:fixed;inset:0;background:rgba(35,28,24,.48);z-index:90;display:none;
+}
+.overlay.show{display:block}
+
+/* 响应式 */
+@media (max-width:1180px){
+  .layout{grid-template-columns:160px minmax(0,1fr)}
+  .aside-col{grid-column:1/-1;position:static;flex-direction:row;flex-wrap:wrap}
+  .aside-card{flex:1 1 260px}
+}
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:30px}
+  .hero-visual{min-height:250px;max-width:480px}
+  .main-nav{display:none}
+  .hamburger{display:grid}
+  .header-inner{gap:14px}
+  .search-box input{width:150px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:740px){
+  :root{--sticky-h:96px}
+  .header-inner{padding:10px 16px;flex-wrap:wrap}
+  .brand-text{font-size:16.5px}
+  .search-box{flex:1;min-width:130px}
+  .search-box input{width:100%}
+  .layout-wrap{padding:22px 16px 0}
+  .layout{grid-template-columns:1fr;gap:22px}
+  .channel-col{position:static;order:-1}
+  .channel-box{padding:12px}
+  .channel-list{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .channel-list a{border-left:0;border:1px solid var(--line);padding:5px 11px;font-size:12.8px}
+  .channel-list a.active{border-color:var(--brand);background:var(--brand);color:#fff}
+  .channel-note{display:none}
+  .aside-col{flex-direction:column}
+  .hero-inner{padding:34px 16px 40px}
+  .hero-facts{gap:18px}
+  .deep-read{padding:20px 18px}
+  .overview{padding:18px}
+  .contribute{grid-template-columns:1fr}
+  .news-item{grid-template-columns:1fr}
+  .news-date{text-align:left}
+  .update-item{grid-template-columns:1fr}
+  .update-date{font-size:12px}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  .comment-list{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .to-top{right:14px;bottom:16px}
+  .announce-inner{padding:6px 16px;font-size:12px}
+  .fc-1,.fc-2,.fc-3{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-shell">
+  <div class="announce">
+    <div class="announce-inner">
+      <span><b>尤果网模特写真</b></span>
+      <span>11月7日 更新：林枝夏「秋日胶片」外拍套图 32 张</span>
+      <span>11月6日 上线：苏晚「暖光棚拍」主题合集</span>
+      <span>本周新增投稿 14 组</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="尤果网模特写真 首页">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#d86a4f"/><stop offset="1" stop-color="#7d2a17"/>
+            </linearGradient>
+          </defs>
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#lg1)"/>
+          <circle cx="20" cy="15.5" r="5.2" fill="#fff5ee"/>
+          <path d="M9.5 32c1.6-6.2 5.8-9.2 10.5-9.2S28.9 25.8 30.5 32" fill="none" stroke="#fff5ee" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="30" cy="10" r="2.1" fill="#ffd9c8"/>
+        </svg>
+        <span class="brand-text">尤果网模特写真</span>
+      </a>
+      <nav class="main-nav" aria-label="主题导航">
+        <a href="/#overview" class="active">领域概览</a>
+        <a href="/#featured">精选图集</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">用户评论</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="search" id="siteSearch" placeholder="搜模特或套图名" aria-label="站内搜索">
+          <button type="button" id="searchBtn" aria-label="搜索">⌕</button>
+          <div class="search-feedback" id="searchFeedback"></div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">MODEL PORTRAIT · 写真作品与模特图集</div>
+      <h1>尤果网模特写真</h1>
+      <p class="hero-lead">汇聚甜系外拍、质感棚拍、主题套图与模特访谈。按日期与类型整理，方便对比不同拍摄风格、构图用光和模特表现。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#featured">浏览精选图集</a>
+        <a class="btn btn-ghost" href="/#updates">查看最新更新</a>
+      </div>
+      <div class="hero-facts">
+        <div><strong>186</strong>组已收录套图</div>
+        <div><strong>42</strong>位常驻模特</div>
+        <div><strong>11月7日</strong>最近更新</div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 460 340" role="presentation">
+        <defs>
+          <linearGradient id="hv1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f3ddd0"/>
+          </linearGradient>
+          <linearGradient id="hv2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#d86a4f"/><stop offset="1" stop-color="#b5432a"/>
+          </linearGradient>
+        </defs>
+        <rect x="24" y="18" width="412" height="304" rx="22" fill="url(#hv1)" stroke="#e6d3c5"/>
+        <rect x="54" y="52" width="168" height="228" rx="14" fill="#f0ddcf"/>
+        <circle cx="138" cy="118" r="34" fill="#d9a98f"/>
+        <path d="M86 260c4-52 27-74 52-74s48 22 52 74" fill="#c98a6c"/>
+        <rect x="242" y="52" width="164" height="104" rx="12" fill="url(#hv2)"/>
+        <rect x="242" y="172" width="76" height="108" rx="12" fill="#f6e3d7"/>
+        <rect x="330" y="172" width="76" height="108" rx="12" fill="#edd0bf"/>
+        <circle cx="280" cy="104" r="16" fill="#ffe4d6" opacity=".85"/>
+        <rect x="96" y="300" width="280" height="4" rx="2" fill="#e6d3c5"/>
+      </svg>
+      <div class="float-card fc-1"><b>秋日胶片</b>林枝夏 · 外拍 32P</div>
+      <div class="float-card fc-2"><b>暖光棚拍</b>苏晚 · 11月6日上新</div>
+      <div class="float-card fc-3"><b>本周投稿</b>14 组 · 已审核 9 组</div>
+    </div>
+  </div>
+</section>
+
+<div class="layout-wrap">
+  <div class="layout">
+
+    <!-- 左频道 -->
+    <aside class="channel-col">
+      <div class="channel-box">
+        <h2>频道索引</h2>
+        <ul class="channel-list" id="channelList">
+          <li><a href="/#overview" class="active">领域概览</a></li>
+          <li><a href="/#featured">精选图集</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#categories">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#tags">相关推荐</a></li>
+          <li><a href="/#rank">热门榜单</a></li>
+          <li><a href="/#contribute">投稿互动</a></li>
+        </ul>
+        <div class="channel-note">套图按上线日期归档，重复发布以首发信息为准。</div>
+      </div>
+    </aside>
+
+    <!-- 中主内容 -->
+    <main class="main-col" id="mainContent">
+
+      <section class="section" id="overview">
+        <div class="section-head">
+          <h2><span class="num">01</span>写真领域概览</h2>
+          <p>从拍摄类型、模特阵容到成片规格，梳理当前可关注的具体方向。</p>
+        </div>
+        <div class="overview">
+          <p>模特写真按拍摄方式大致分为<strong>外拍</strong>、<strong>棚拍</strong>、<strong>主题创作</strong>三类。外拍依赖自然光与场地，常见于公园、老街、海边，成片风格偏松弛，服装多为日常系；棚拍可控光，适合丝绒、皮革、纯色背景等质感表达，布光方案通常写在套图说明里；主题创作则围绕特定概念组织，例如「旧时光」「深夜便利店」「白衬衫」，一组套图往往包含 20 到 45 张成片。</p>
+          <p>模特阵容方面，常驻模特与特邀模特在更新频率上差别明显。常驻模特每月有 1 至 3 组新图上线，特邀模特多为单次合作，套图数量少但主题集中。按 11 月 8 日的收录情况，<strong>林枝夏</strong>、<strong>苏晚</strong>、<strong>陈一诺</strong>、<strong>温梨</strong> 四位的套图在站内被反复检索，分别对应胶片外拍、暖光棚拍、黑白情绪和纯色极简四种路线。</p>
+          <p>成片规格也值得留意。同一组套图常同时提供 4:3 横构图与 3:4 竖构图，部分附有拍摄花絮视频与布光说明。关注写真的人通常先看套图的<strong>色调统一性</strong>与<strong>模特状态</strong>，再看服装与场地是否服务于主题。近期「秋日胶片」和「暖光棚拍」两组上线后，关于胶片颗粒与数码质感的比较明显增多。</p>
+        </div>
+      </section>
+
+      <section class="section" id="featured">
+        <div class="section-head">
+          <h2><span class="num">02</span>精选写真图集</h2>
+          <p>按套图类型与上线时间挑选，每张卡片对应一组可检索的完整作品。</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/linzhixia01/400/300" width="400" height="300" loading="lazy" alt="林枝夏秋日胶片外拍，银杏树下侧身回望">
+              <span class="card-type">胶片外拍</span>
+            </div>
+            <div class="card-body">
+              <h3>林枝夏 · 秋日胶片</h3>
+              <div class="desc">银杏林与旧砖墙两处外景，柯达 400 颗粒感明显，32 张成片里侧逆光占一半，模特表情放松。</div>
+              <div class="tag-row"><span class="tag">胶片颗粒</span><span class="tag">侧逆光</span><span class="tag">日常系</span></div>
+              <div class="meta-row"><span>11月7日上线</span><span class="hot">热度 9.6</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/suwan02/400/300" width="400" height="300" loading="lazy" alt="苏晚暖光棚拍，米色背景前手持白纱">
+              <span class="card-type">质感棚拍</span>
+            </div>
+            <div class="card-body">
+              <h3>苏晚 · 暖光棚拍</h3>
+              <div class="desc">两张柔光箱加一块反光板，色温 3800K，米色背景纸。28 张成片以半身与大特写为主，肤质细节保留完整。</div>
+              <div class="tag-row"><span class="tag">柔光箱</span><span class="tag">半身构图</span><span class="tag">低色温</span></div>
+              <div class="meta-row"><span>11月6日上线</span><span class="hot">热度 9.4</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/chenyinuo03/400/300" width="400" height="300" loading="lazy" alt="陈一诺黑白情绪写真，窗边低头剪影">
+              <span class="card-type">黑白情绪</span>
+            </div>
+            <div class="card-body">
+              <h3>陈一诺 · 窗边黑白</h3>
+              <div class="desc">室内自然窗光，全程黑白输出。24 张成片强调明暗过渡，模特低头与侧脸镜头较多，情绪浓度高。</div>
+              <div class="tag-row"><span class="tag">自然窗光</span><span class="tag">黑白</span><span class="tag">侧脸</span></div>
+              <div class="meta-row"><span>11月3日上线</span><span class="hot">热度 9.1</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/wenli04/400/300" width="400" height="300" loading="lazy" alt="温梨纯色极简棚拍，蓝色背景前正面站立">
+              <span class="card-type">纯色极简</span>
+            </div>
+            <div class="card-body">
+              <h3>温梨 · 纯色蓝调</h3>
+              <div class="desc">单一钴蓝背景，硬光单灯。18 张成片全部正面或四分之三侧，服装仅两套，靠姿态变化撑起整组。</div>
+              <div class="tag-row"><span class="tag">硬光</span><span class="tag">单灯</span><span class="tag">钴蓝</span></div>
+              <div class="meta-row"><span>10月30日上线</span><span class="hot">热度 8.8</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/theme05/400/300" width="400" height="300" loading="lazy" alt="深夜便利店主题写真，模特在货架前回眸">
+              <span class="card-type">主题创作</span>
+            </div>
+            <div class="card-body">
+              <h3>深夜便利店 · 概念套图</h3>
+              <div class="desc">凌晨一点的便利店实景，冷白顶灯与冰柜光混合。36 张成片按时间线排列，从进门到结账形成小叙事。</div>
+              <div class="tag-row"><span class="tag">实景</span><span class="tag">冷白灯</span><span class="tag">叙事排列</span></div>
+              <div class="meta-row"><span>10月28日上线</span><span class="hot">热度 8.7</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/theme06/400/300" width="400" height="300" loading="lazy" alt="白衬衫系列棚拍，模特靠墙半坐">
+              <span class="card-type">主题创作</span>
+            </div>
+            <div class="card-body">
+              <h3>白衬衫 · 六人合辑</h3>
+              <div class="desc">同一件白衬衫由六位模特分别演绎，统一灰背景与侧光。每人 6 张，共 36 张，便于横向比较表现力。</div>
+              <div class="tag-row"><span class="tag">合辑</span><span class="tag">统一布光</span><span class="tag">横向比较</span></div>
+              <div class="meta-row"><span>10月24日上线</span><span class="hot">热度 8.5</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/beach07/400/300" width="400" height="300" loading="lazy" alt="海边日落外拍，模特赤脚走在湿沙上">
+              <span class="card-type">外拍</span>
+            </div>
+            <div class="card-body">
+              <h3>海边日落 · 湿沙外拍</h3>
+              <div class="desc">日落前 40 分钟拍摄，色温快速下降。26 张成片保留天空渐变，模特赤脚，服装为亚麻长裙。</div>
+              <div class="tag-row"><span class="tag">黄金时刻</span><span class="tag">亚麻</span><span class="tag">海景</span></div>
+              <div class="meta-row"><span>10月21日上线</span><span class="hot">热度 8.4</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/studio08/400/300" width="400" height="300" loading="lazy" alt="皮革质感棚拍，模特穿黑色皮衣坐在木箱上">
+              <span class="card-type">质感棚拍</span>
+            </div>
+            <div class="card-body">
+              <h3>皮革与木箱 · 硬调棚拍</h3>
+              <div class="desc">顶光加轮廓光，皮革反光被刻意保留。20 张成片以低机位为主，木箱道具贯穿整组，色调偏暗。</div>
+              <div class="tag-row"><span class="tag">顶光</span><span class="tag">皮革</span><span class="tag">低机位</span></div>
+              <div class="meta-row"><span>10月18日上线</span><span class="hot">热度 8.2</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="updates">
+        <div class="section-head">
+          <h2><span class="num">03</span>最新更新动态</h2>
+          <p>按上线日期排列，含套图、花絮与布光说明的具体变更。</p>
+        </div>
+        <div class="update-list">
+          <div class="update-item">
+            <span class="update-date">2026-11-07</span>
+            <div><h3>林枝夏「秋日胶片」上线</h3><p>32 张成片，银杏林与旧砖墙两处外景，附 3 分钟花絮。</p></div>
+            <span class="update-badge">外拍</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-11-06</span>
+            <div><h3>苏晚「暖光棚拍」上线</h3><p>28 张成片，色温 3800K，同步放出双柔光箱布置示意图。</p></div>
+            <span class="update-badge">棚拍</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-11-05</span>
+            <div><h3>「白衬衫」合辑补充第 6 位模特</h3><p>新增温梨 6 张，合辑总数由 30 张增至 36 张。</p></div>
+            <span class="update-badge">合辑</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-11-03</span>
+            <div><h3>陈一诺「窗边黑白」上线</h3><p>24 张成片，全程自然窗光，无人工补光。</p></div>
+            <span class="update-badge">黑白</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-10-30</span>
+            <div><h3>温梨「纯色蓝调」上线</h3><p>18 张成片，硬光单灯，钴蓝背景纸型号已写入说明。</p></div>
+            <span class="update-badge">极简</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-10-28</span>
+            <div><h3>「深夜便利店」概念套图上线</h3><p>36 张成片按时间线排列，附拍摄许可说明。</p></div>
+            <span class="update-badge">主题</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-10-24</span>
+            <div><h3>「白衬衫」六人合辑首发</h3><p>统一灰背景与侧光，每位模特 6 张，共 30 张。</p></div>
+            <span class="update-badge">合辑</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-10-21</span>
+            <div><h3>「海边日落」湿沙外拍上线</h3><p>26 张成片，黄金时刻拍摄，天空渐变保留完整。</p></div>
+            <span class="update-badge">外拍</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-10-18</span>
+            <div><h3>「皮革与木箱」硬调棚拍上线</h3><p>20 张成片，顶光加轮廓光，低机位为主。</p></div>
+            <span class="update-badge">棚拍</span>
+          </div>
+          <div class="update-item">
+            <span class="update-date">2026-10-15</span>
+            <div><h3>模特访谈栏目新增苏晚一期</h3><p>谈柔光箱距离与表情控制，全文约 1800 字。</p></div>
+            <span class="update-badge">访谈</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="section-head">
+          <h2><span class="num">04</span>分类入口</h2>
+          <p>按拍摄方式与风格划分，点击进入对应栏目定位。</p>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#featured"><h3>胶片外拍</h3><p>自然光、颗粒感、日常场景</p></a>
+          <a class="cat-item" href="/#featured"><h3>质感棚拍</h3><p>柔光箱、硬光、纯色背景</p></a>
+          <a class="cat-item" href="/#featured"><h3>黑白情绪</h3><p>窗光、明暗过渡、低饱和</p></a>
+          <a class="cat-item" href="/#featured"><h3>主题创作</h3><p>概念叙事、实景、道具串联</p></a>
+          <a class="cat-item" href="/#featured"><h3>纯色极简</h3><p>单灯、单背景、姿态变化</p></a>
+          <a class="cat-item" href="/#featured"><h3>多人合辑</h3><p>统一布光、横向比较表现力</p></a>
+          <a class="cat-item" href="/#guide"><h3>拍摄花絮</h3><p>布光图、幕后视频、参数说明</p></a>
+          <a class="cat-item" href="/#comments"><h3>模特访谈</h3><p>表情控制、拍摄习惯、合作感受</p></a>
+        </div>
+      </section>
+
+      <section class="section" id="deep">
+        <div class="section-head">
+          <h2><span class="num">05</span>深度解析：套图之间的差异在哪</h2>
+          <p>从布光、构图到模特状态，拆开几组具体套图的可比较项。</p>
+        </div>
+        <div class="deep-read">
+          <h3>胶片颗粒与数码质感的取舍</h3>
+          <p>林枝夏「秋日胶片」用柯达 400 拍摄，32 张成片里颗粒在暗部尤其明显。同一场景如果换数码机身加胶片模拟，暗部会干净许多，但高光过渡会硬一档。判断一组胶片外拍是否成立，看三个点：暗部颗粒是否均匀、肤色是否偏绿、高光有没有溢出。前两项过关，第三项靠拍摄时的曝光补偿控制。</p>
+          <p>苏晚「暖光棚拍」给出另一种答案。3800K 色温配合双柔光箱，肤色还原偏暖，数码文件的宽容度允许后期把高光拉回。两组套图放在一起比较，胶片那组胜在质感统一，数码这组胜在细节可控。</p>
+
+          <h3>布光差异带来的表情空间</h3>
+          <p>温梨「纯色蓝调」是硬光单灯，模特必须精确控制下巴角度，稍偏一点鼻影就会切到脸颊。18 张成片里正面镜头占 11 张，说明布光容错低、可用的姿态少。陈一诺「窗边黑白」反过来，自然窗光柔和，24 张里低头与侧脸占多数，表情空间更大。</p>
+          <table class="compare-table">
+            <thead><tr><th>对比项</th><th>纯色蓝调</th><th>窗边黑白</th></tr></thead>
+            <tbody>
+              <tr><td>光源</td><td>硬光单灯</td><td>自然窗光</td></tr>
+              <tr><td>成片数</td><td>18 张</td><td>24 张</td></tr>
+              <tr><td>正面镜头</td><td>11 张</td><td>6 张</td></tr>
+              <tr><td>表情空间</td><td>窄，依赖姿态</td><td>宽，依赖光线过渡</td></tr>
+            </tbody>
+          </table>
+
+          <h3>合辑为什么比单人套图难做</h3>
+          <p>「白衬衫」六人合辑要求同一件衬衫、同一灰背景、同一侧光。难点在模特之间的肤色差，统一白平衡后，深肤色模特的衬衫细节容易过曝。首发 30 张里，第 5 位模特的 6 张明显偏亮，11 月 5 日补入温梨时，布光距离从 1.8 米调到 2.1 米，过曝问题才缓解。</p>
+          <blockquote>判断一组合辑是否合格，先看六个人的衬衫白是否一致，再看侧光角度有没有漂移。两项都稳，才有横向比较的意义。</blockquote>
+
+          <h3>主题套图的叙事密度</h3>
+          <p>「深夜便利店」36 张按时间线排列，从进门、挑选、结账到离开，每 6 到 8 张推进一个动作。实景拍摄的麻烦在于冷白顶灯与冰柜光色温不同，靠后期统一到 5200K 附近。概念套图最怕张数不够，叙事断档；36 张是这类主题的下限，低于 24 张基本只能算场景拼贴。</p>
+          <p>「海边日落」则相反，26 张没有叙事，靠光线变化本身形成节奏。日落前 40 分钟里色温从 5600K 降到 3200K，成片按拍摄顺序排列就能看出渐变，不需要额外设计动作。</p>
+        </div>
+      </section>
+
+      <section class="section" id="guide">
+        <div class="section-head">
+          <h2><span class="num">06</span>体验指南：怎么挑一组写真来看</h2>
+          <p>从类型、布光到成片数量，给出可操作的比较顺序。</p>
+        </div>
+        <div class="guide-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div><h3>先定类型，再看布光</h3><p>外拍看自然光时段，棚拍看光源数量与色温。套图说明里写了柔光箱、硬光或窗光的，判断成本最低。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div><h3>用成片数量筛叙事型套图</h3><p>主题创作低于 24 张，叙事容易断。合辑看每人张数是否一致，六人各 6 张比六人共 30 张更整齐。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div><h3>对比同模特的前后两组</h3><p>林枝夏 9 月的「旧巷」偏硬调，10 月的「秋日胶片」转向松弛。同一模特的两组放在一起，能看出状态变化。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div><h3>看花絮有没有布光说明</h3><p>带布光图的套图，复现成本低；只有成片没有说明的，参考价值集中在构图与表情。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div><h3>留意上线日期与修订记录</h3><p>补图、调色返工的套图会在说明里标注修订日期。11 月 5 日「白衬衫」补图就是一例。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-head">
+          <h2><span class="num">07</span>常见问答</h2>
+          <p>围绕套图规格、布光与更新节奏的具体问题。</p>
+        </div>
+        <div class="faq-wrap">
+          <details class="faq">
+            <summary>一组模特写真通常包含多少张成片？</summary>
+            <div class="faq-body">外拍与棚拍多在 18 到 32 张之间，主题创作需要叙事支撑，常在 24 到 36 张。少于 18 张的多为单场景快拍，大于 40 张的往往拆成上下两部分发布。</div>
+          </details>
+          <details class="faq">
+            <summary>胶片外拍和数码棚拍的成片区别在哪？</summary>
+            <div class="faq-body">胶片外拍的暗部颗粒更明显，肤色过渡偏暖，高光容易溢出；数码棚拍细节保留完整，色温可精确到 100K，后期调整空间大。看套图说明里的器材与色温标注就能区分。</div>
+          </details>
+          <details class="faq">
+            <summary>「白衬衫」合辑为什么分两次上线？</summary>
+            <div class="faq-body">首发 30 张由五位模特各 6 张组成，第六位温梨的 6 张在 11 月 5 日补入。补图原因是统一白平衡后深肤色模特的衬衫细节过曝，布光距离从 1.8 米调到 2.1 米后重新拍摄。</div>
+          </details>
+          <details class="faq">
+            <summary>硬光单灯的套图为什么正面镜头多？</summary>
+            <div class="faq-body">硬光下鼻影和颧骨阴影边缘锐利，侧脸角度稍偏就会切进脸颊。温梨「纯色蓝调」18 张里 11 张正面，是为了避开阴影切割，姿态变化靠手部和肩部完成。</div>
+          </details>
+          <details class="faq">
+            <summary>主题套图按什么顺序排列？</summary>
+            <div class="faq-body">叙事型按拍摄时间线，例如「深夜便利店」从进门到离开每 6 到 8 张推进一个动作；光线型按色温变化排，例如「海边日落」按 5600K 降到 3200K 的顺序，不需要额外设计动作。</div>
+          </details>
+          <details class="faq">
+            <summary>常驻模特多久更新一组新图？</summary>
+            <div class="faq-body">常驻模特每月 1 到 3 组，间隔多在 10 到 20 天。林枝夏 9 月「旧巷」、10 月「秋日胶片」两组相隔 28 天；苏晚 10 月与 11 月各一组，间隔 21 天。</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" id="comments">
+        <div class="section-head">
+          <h2><span class="num">08</span>用户评论</h2>
+          <p>来自套图页与花絮页的留言，含具体条目与不同看法。</p>
+        </div>
+        <div class="comment-list">
+          <div class="comment"><div class="comment-head"><span class="avatar">林</span><span class="comment-name">胶片老周</span><span class="comment-time">11-07</span></div><p>秋日胶片那组的暗部颗粒是真的，不是后期加的。柯达 400 在阴天拍就是这样，肤色偏一点绿反而对。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">苏</span><span class="comment-name">午后三点</span><span class="comment-time">11-07</span></div><p>暖光棚拍第 14 张的高光有点过，白纱细节快没了。不过整体色温舒服，比上一组冷调的好看。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">陈</span><span class="comment-name">窗边党</span><span class="comment-time">11-06</span></div><p>陈一诺窗边黑白第 8 张低头那张，明暗过渡太干净了。自然窗光能拍成这样，房间朝向应该不错。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">温</span><span class="comment-name">蓝背景爱好者</span><span class="comment-time">11-05</span></div><p>纯色蓝调 18 张看了两遍，硬光单灯确实难，但正面镜头太多，翻到后面有点重复。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">合</span><span class="comment-name">六人合辑围观</span><span class="comment-time">11-05</span></div><p>白衬衫补的温梨 6 张明显亮了一档，和前面五个人放一起能看出来。补图说明里写了布光距离调整，算是交代清楚了。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">深</span><span class="comment-name">便利店夜班</span><span class="comment-time">11-04</span></div><p>深夜便利店 36 张按时间线排，看到结账那张才反应过来是个小故事。实景冷白灯和冰柜光混一起没翻车，后期有功底。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">海</span><span class="comment-name">湿沙与风</span><span class="comment-time">11-03</span></div><p>海边日落那组天空渐变保留得好，第 20 张往后色温掉得快，模特脸有点偏橙，不过日落本来就这样。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">皮</span><span class="comment-name">顶光不友好</span><span class="comment-time">11-02</span></div><p>皮革与木箱低机位太多，翻到第 12 张开始审美疲劳。道具就一个木箱，能不能换点别的。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">访</span><span class="comment-name">苏晚访谈读者</span><span class="comment-time">11-01</span></div><p>访谈里说柔光箱距离控制在 1.5 米以内，试了一下确实肤色更匀。这种具体参数比空谈布光有用。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">林</span><span class="comment-name">旧巷回头客</span><span class="comment-time">10-31</span></div><p>林枝夏 9 月旧巷那组偏硬，10 月秋日胶片松弛不少。同一个人两组放一起看，状态变化挺明显。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">路</span><span class="comment-name">路过看看</span><span class="comment-time">10-30</span></div><p>不太懂布光，就是觉得钴蓝背景那组颜色好看。别的说不上来。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">白</span><span class="comment-name">白衬衫控</span><span class="comment-time">10-29</span></div><p>六个人穿同一件白衬衫，侧光角度没漂，这点做得细。就是第六位补得太晚，隔了十几天才齐。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">数</span><span class="comment-name">数码派</span><span class="comment-time">10-28</span></div><p>胶片颗粒看多了累眼，还是暖光棚拍那组看着舒服。个人口味问题，别喷。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">花</span><span class="comment-name">花絮收藏</span><span class="comment-time">10-27</span></div><p>秋日胶片附的 3 分钟花絮里能看到反光板位置，比成片有用。希望以后每组都带布光图。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">时</span><span class="comment-name">时间线读者</span><span class="comment-time">10-26</span></div><p>深夜便利店按进门到结账排，第 24 张挑饮料那张停留最久，构图也稳。这种叙事型套图值得多来点。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">比</span><span class="comment-name">比较党</span><span class="comment-time">10-25</span></div><p>纯色蓝调 18 张和窗边黑白 24 张，一个靠姿态一个靠光，正面镜头数量差了一倍，这个对比挺有意思。</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <div class="section-head">
+          <h2><span class="num">09</span>相关资讯</h2>
+          <p>近一个月内与套图上线、拍摄活动相关的具体动态。</p>
+        </div>
+        <div class="news-list">
+          <article class="news-item">
+            <div>
+              <h3>「秋日胶片」外拍选址银杏林，拍摄当日风速 3 级</h3>
+              <p>11 月 7 日上线的 32 张成片中，有 9 张利用了落叶飘落的动态，摄影师在花絮里提到等了约 25 分钟才拍到合适的一张。</p>
+            </div>
+            <div class="news-date">2026-11-07</div>
+          </article>
+          <article class="news-item">
+            <div>
+              <h3>苏晚棚拍布光图公开：双柔光箱加 1 块反光板</h3>
+              <p>11 月 6 日随套图放出的布置示意图显示，主灯距离模特 1.5 米，辅灯 2 米，色温统一 3800K，附有具体型号。</p>
+            </div>
+            <div class="news-date">2026-11-06</div>
+          </article>
+          <article class="news-item">
+            <div>
+              <h3>「白衬衫」合辑补入温梨 6 张，布光距离调整至 2.1 米</h3>
+              <p>11 月 5 日的修订记录写明，原 1.8 米距离导致深肤色模特衬衫细节过曝，调整后重新拍摄 6 张并替换。</p>
+            </div>
+            <div class="news-date">2026-11-05</div>
+          </article>
+          <article class="news-item">
+            <div>
+              <h3>陈一诺黑白套图全程未补光，窗光拍摄 4 小时</h3>
+              <p>11 月 3 日上线说明提到，拍摄从下午 2 点持续到 6 点，靠窗光角度变化完成明暗过渡，24 张成片无一帧人工补光。</p>
+            </div>
+            <div class="news-date">2026-11-03</div>
+          </article>
+          <article class="news-item">
+            <div>
+              <h3>「深夜便利店」概念套图取得拍摄许可</h3>
+              <p>10 月 28 日上线的套图说明中附有门店拍摄许可编号，拍摄时间为凌晨 1 点至 3 点，避开客流高峰。</p>
+            </div>
+            <div class="news-date">2026-10-28</div>
+          </article>
+          <article class="news-item">
+            <div>
+              <h3>海边日落外拍记录色温变化：40 分钟内下降 2400K</h3>
+              <p>10 月 21 日上线的套图附有拍摄日志，记录日落前 40 分钟色温从 5600K 降至 3200K，成片按时间顺序排列。</p>
+            </div>
+            <div class="news-date">2026-10-21</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="tags">
+        <div class="section-head">
+          <h2><span class="num">10</span>相关推荐标签</h2>
+          <p>按方向与具体条目索引，便于继续查找同类内容。</p>
+        </div>
+        <div class="tag-index">
+          <a href="/#featured">胶片外拍</a>
+          <a href="/#featured">暖光棚拍</a>
+          <a href="/#featured">硬光单灯</a>
+          <a href="/#featured">自然窗光</a>
+          <a href="/#featured">黑白情绪</a>
+          <a href="/#featured">纯色极简</a>
+          <a href="/#featured">多人合辑</a>
+          <a href="/#featured">主题叙事</a>
+          <a href="/#guide" class="small">布光图</a>
+          <a href="/#guide" class="small">拍摄花絮</a>
+          <a href="/#guide" class="small">色温记录</a>
+          <a href="/#comments" class="small">模特访谈</a>
+          <a href="/#featured" class="small">林枝夏</a>
+          <a href="/#featured" class="small">苏晚</a>
+          <a href="/#featured" class="small">陈一诺</a>
+          <a href="/#featured" class="small">温梨</a>
+        </div>
+      </section>
+
+      <section class="section" id="rank">
+        <div class="section-head">
+          <h2><span class="num">11</span>热门榜单</h2>
+          <p>按近 30 天检索与收藏综合排序，分数为站内热度示例。</p>
+        </div>
+        <div class="rank-list">
+          <div class="rank-item"><span class="rank-no">01</span><span class="rank-name">林枝夏 · 秋日胶片</span><span class="rank-score">9.6</span></div>
+          <div class="rank-item"><span class="rank-no">02</span><span class="rank-name">苏晚 · 暖光棚拍</span><span class="rank-score">9.4</span></div>
+          <div class="rank-item"><span class="rank-no">03</span><span class="rank-name">陈一诺 · 窗边黑白</span><span class="rank-score">9.1</span></div>
+          <div class="rank-item"><span class="rank-no">04</span><span class="rank-name">温梨 · 纯色蓝调</span><span class="rank-score">8.8</span></div>
+          <div class="rank-item"><span class="rank-no">05</span><span class="rank-name">深夜便利店 · 概念套图</span><span class="rank-score">8.7</span></div>
+          <div class="rank-item"><span class="rank-no">06</span><span class="rank-name">白衬衫 · 六人合辑</span><span class="rank-score">8.5</span></div>
+          <div class="rank-item"><span class="rank-no">07</span><span class="rank-name">海边日落 · 湿沙外拍</span><span class="rank-score">8.4</span></div>
+          <div class="rank-item"><span class="rank-no">08</span><span class="rank-name">皮革与木箱 · 硬调棚拍</span><span class="rank-score">8.2</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="contribute">
+        <div class="contribute">
+          <div>
+            <h2>投稿与作品交流</h2>
+            <p>有完整套图或布光记录想分享？按「模特名 + 拍摄类型 + 成片数量」格式提交，审核后进入更新列表。本周已收到 14 组投稿，9 组通过。</p>
+          </div>
+          <a class="btn btn-primary" href="/#contribute">提交作品</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右辅助栏 -->
+    <aside class="aside-col">
+      <div class="aside-card">
+        <h2><span class="dot"></span>站内热榜</h2>
+        <ul class="hot-list">
+          <li><b>1</b><span>林枝夏 · 秋日胶片</span></li>
+          <li><b>2</b><span>苏晚 · 暖光棚拍</span></li>
+          <li><b>3</b><span>陈一诺 · 窗边黑白</span></li>
+          <li><b>4</b><span>温梨 · 纯色蓝调</span></li>
+          <li><b>5</b><span>白衬衫 · 六人合辑</span></li>
+          <li><b>6</b><span>深夜便利店 · 概念套图</span></li>
+        </ul>
+      </div>
+      <div class="aside-card">
+        <h2><span class="dot"></span>更新流</h2>
+        <ul class="mini-update">
+          <li>林枝夏「秋日胶片」上线<span>11月7日 · 32张</span></li>
+          <li>苏晚「暖光棚拍」上线<span>11月6日 · 28张</span></li>
+          <li>白衬衫补温梨 6 张<span>11月5日 · 合辑36张</span></li>
+          <li>陈一诺「窗边黑白」上线<span>11月3日 · 24张</span></li>
+          <li>温梨「纯色蓝调」上线<span>10月30日 · 18张</span></li>
+        </ul>
+      </div>
+      <div class="aside-card">
+        <h2><span class="dot"></span>拍摄类型速查</h2>
+        <ul class="hot-list">
+          <li><b>·</b><span>外拍：自然光、场地开放</span></li>
+          <li><b>·</b><span>棚拍：可控光、纯色背景</span></li>
+          <li><b>·</b><span>合辑：统一布光、多人比较</span></li>
+          <li><b>·</b><span>主题：概念叙事、实景道具</span></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="#d86a4f"/>
+            <circle cx="20" cy="15.5" r="5.2" fill="#fff5ee"/>
+            <path d="M9.5 32c1.6-6.2 5.8-9.2 10.5-9.2S28.9 25.8 30.5 32" fill="none" stroke="#fff5ee" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+          <span>尤果网模特写真</span>
+        </div>
+        <p class="footer-desc">收录时间跨度从 2026 年 9 月至今，涵盖外拍、棚拍、主题创作与多人合辑四类成片，附布光说明与拍摄花絮。更新节奏为每周 2 到 4 组，补图与修订单独标注日期。</p>
+      </div>
+      <div class="footer-col">
+        <h3>内容栏目</h3>
+        <ul>
+          <li><a href="/#featured">精选图集</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#categories">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>互动与参考</h3>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#contribute">投稿互动</a></li>
+          <li><a href="/#rank">热门榜单</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>说明</h3>
+        <ul>
+          <li><a href="/#top">返回顶部</a></li>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#tags">标签索引</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>页面内条目、热度与日期为内容聚合示例，更新信息以 2026-11-08 为基准。</span>
+      <span>© 2026 尤果网模特写真 · 内容归档</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="overlay" id="overlay"></div>
+
+<script>
+(function(){
+  var searchInput = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+  var feedback = document.getElementById('searchFeedback');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#featured .card'));
+  var updateItems = Array.prototype.slice.call(document.querySelectorAll('#updates .update-item'));
+  var newsItems = Array.prototype.slice.call(document.querySelectorAll('#news .news-item'));
+
+  function normalize(s){return (s||'').toLowerCase().replace(/\s+/g,'');}
+
+  function doSearch(){
+    var q = normalize(searchInput.value);
+    if(!q){
+      feedback.classList.remove('show');
+      feedback.textContent='';
+      cards.forEach(function(c){c.style.display='';});
+      updateItems.forEach(function(u){u.style.display='';});
+      newsItems.forEach(function(n){n.style.display='';});
+      return;
+    }
+    var hitCards = 0, hitUpdates = 0, hitNews = 0;
+    cards.forEach(function(c){
+      var t = normalize(c.textContent);
+      var ok = t.indexOf(q) > -1;
+      c.style.display = ok ? '' : 'none';
+      if(ok) hitCards++;
+    });
+    updateItems.forEach(function(u){
+      var ok = normalize(u.textContent).indexOf(q) > -1;
+      u.style.display = ok ? '' : 'none';
+      if(ok) hitUpdates++;
+    });
+    newsItems.forEach(function(n){
+      var ok = normalize(n.textContent).indexOf(q) > -1;
+      n.style.display = ok ? '' : 'none';
+      if(ok) hitNews++;
+    });
+    var total = hitCards + hitUpdates + hitNews;
+    feedback.textContent = total
+      ? '找到 ' + total + ' 条相关内容（图集 ' + hitCards + ' / 更新 ' + hitUpdates + ' / 资讯 ' + hitNews + '）'
+      : '没有找到与“' + searchInput.value + '”相关的内容，换个模特名或套图名试试。';
+    feedback.classList.add('show');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(!searchInput.value){ doSearch(); }
+  });
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight * 0.9){
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 频道高亮
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main .section[id]'));
+  var channelLinks = Array.prototype.slice.call(document.querySelectorAll('#channelList a'));
+  function highlightNav(){
+    var scrollPos = window.scrollY + 150;
+    var currentId = '';
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= scrollPos){ currentId = sec.id; }
+    });
+    channelLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '/#' + currentId);
+    });
+  }
+  window.addEventListener('scroll', highlightNav, {passive:true});
+  highlightNav();
+
+  // 移动端菜单
+  var hamburger = document.getElementById('hamburger');
+  var nav = document.querySelector('.main-nav');
+  var overlay = document.getElementById('overlay');
+  function openMenu(){
+    nav.style.display = 'flex';
+    nav.style.position = 'fixed';
+    nav.style.top = '0';
+    nav.style.left = '0';
+    nav.style.bottom = '0';
+    nav.style.width = '78%';
+    nav.style.maxWidth = '320px';
+    nav.style.background = '#fffdfb';
+    nav.style.zIndex = '100';
+    nav.style.flexDirection = 'column';
+    nav.style.padding = '80px 18px 24px';
+    nav.style.gap = '6px';
+    nav.style.boxShadow = '0 0 40px rgba(0,0,0,.2)';
+    nav.style.overflowY = 'auto';
+    overlay.classList.add('show');
+    hamburger.setAttribute('aria-expanded','true');
+  }
+  function closeMenu(){
+    nav.style.display = '';
+    nav.style.position = '';
+    nav.style.top = '';
+    nav.style.left = '';
+    nav.style.bottom = '';
+    nav.style.width = '';
+    nav.style.maxWidth = '';
+    nav.style.background = '';
+    nav.style.zIndex = '';
+    nav.style.flexDirection = '';
+    nav.style.padding = '';
+    nav.style.gap = '';
+    nav.style.boxShadow = '';
+    nav.style.overflowY = '';
+    overlay.classList.remove('show');
+    hamburger.setAttribute('aria-expanded','false');
+  }
+  hamburger.addEventListener('click', function(){
+    if(nav.style.display === 'flex'){ closeMenu(); } else { openMenu(); }
+  });
+  overlay.addEventListener('click', closeMenu);
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 1024){ closeMenu(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && overlay.classList.contains('show')){ closeMenu(); }
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 1024 && overlay.classList.contains('show')){ closeMenu(); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "尤果网模特写真",
+  "description": "聚合模特写真作品、图集与圈内动态，涵盖外拍、棚拍、主题创作与多人合辑。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "一组模特写真通常包含多少张成片？",
+      "acceptedAnswer": {"@type": "Answer", "text": "外拍与棚拍多在 18 到 32 张之间，主题创作需要叙事支撑，常在 24 到 36 张。"}
+    },
+    {
+      "@type": "Question",
+      "name": "胶片外拍和数码棚拍的成片区别在哪？",
+      "acceptedAnswer": {"@type": "Answer", "text": "胶片外拍暗部颗粒更明显，肤色过渡偏暖；数码棚拍细节保留完整，色温可精确到 100K。"}
+    },
+    {
+      "@type": "Question",
+      "name": "「白衬衫」合辑为什么分两次上线？",
+      "acceptedAnswer": {"@type": "Answer", "text": "首发 30 张由五位模特各 6 张组成，第六位温梨的 6 张在 11 月 5 日补入，因布光距离调整重新拍摄。"}
+    },
+    {
+      "@type": "Question",
+      "name": "硬光单灯的套图为什么正面镜头多？",
+      "acceptedAnswer": {"@type": "Answer", "text": "硬光下鼻影和颧骨阴影边缘锐利，侧脸角度稍偏就会切进脸颊，因此正面镜头占比更高。"}
+    },
+    {
+      "@type": "Question",
+      "name": "主题套图按什么顺序排列？",
+      "acceptedAnswer": {"@type": "Answer", "text": "叙事型按拍摄时间线排列，光线型按色温变化排列。"}
+    },
+    {
+      "@type": "Question",
+      "name": "常驻模特多久更新一组新图？",
+      "acceptedAnswer": {"@type": "Answer", "text": "常驻模特每月 1 到 3 组，间隔多在 10 到 20 天。"}
+    }
+  ]
+}
+</script>
+</body>
+                                                          </html>
